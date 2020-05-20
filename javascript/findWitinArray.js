@@ -9,3 +9,9 @@ var findInArray = function(array, iterator) {
     return -1
     
   };
+
+  //refactor
+
+  var findInArray = function(array, iterator) {
+    return array.map(iterator).indexOf(true);
+  };
