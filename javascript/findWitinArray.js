@@ -10,7 +10,7 @@ var findInArray = function(array, iterator) {
     
   };
 
-  //refactor
+  //refactor actually 2n on runtime so a little worse, but cleaner.
 
   var findInArray = function(array, iterator) {
     return array.map(iterator).indexOf(true);
