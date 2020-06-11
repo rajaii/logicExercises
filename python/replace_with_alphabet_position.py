@@ -7,22 +7,28 @@ def alphabet_position(text):
     'p': '16', 'q': '17', 'r': '18','s': '19', 't': '20', 'u': '21', 'v': '22', 
     'w': '23', 'x': '24', 'y': '25', 'z': '26'}
     new_text = text.lower()
+
     for i in range(len(new_text)):
+
         if new_text[i] not in let_dict:
             continue
+
         elif i == len(new_text) - 1:
             ret_str += let_dict[new_text[i]]
+
         else:
             ret_str += f'{let_dict[new_text[i]]} '
+            
     return ret_str
     
-#edge cases empty all non letter return '' or null?
+#edge cases: empty all non letter return '' or null?
 
-#questions limits on inputs?, on time/space?, ^
+#questions: limits on inputs?, on time/space?, how to handle return on ^?
 
 
 #set empt str
 #make a hash table with letter key num values
-#sting to lower
-#loop string and concat with emt str with space at end except on last iteration
-#if not in dict skip
+#sting to lower to make all even comparisions
+#loop string and concat with emt str with space at end except on last iteration exclude space
+#if not in dict skip (put above other conditions in loop)
+#return the string that was set
