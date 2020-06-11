@@ -17,7 +17,7 @@ def count(string):
                 storehouse.update({string[i]: 1})
     
     return storehouse
-    
+    #u, w, i, 
 #edge cases emty string= return empty dict; 
 #'aba'
 
