@@ -1,0 +1,68 @@
+codewars.com/kata/525c7c5ab6aecef16e0001a5/train/javascript
+tortoise:
+https://www.codewars.com/kata/55e2adece53b4cdcb900006c/train/python
+
+function parseInt(string) {
+  // TODO: it's your task now
+  let numObj = {
+  'one': 1,'two': 2,'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8,
+  'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14,
+  'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 
+  'twenty': 20, 'thirty': 30,'forty': 40,'fifty': 50,'sixty': 60,'seventy': 70,
+  'eighty': 80,'ninety': 90,'hundred': 100, 'thousand': 1000, 'million': 1000000
+  };
+  let retNum = 0;
+  let sArr = string.split(' ');
+  console.log(`string: ${string}, sArr: ${sArr}`);
+  for (let i = 0; i < sArr.length; i++) {
+    if (sArr[i] === 'and') {
+    continue;
+    } else if (sArr[i] === 'thousand') {
+      let subSArr = sArr.slice(0, i + 1);
+      for (let i=0; i< subSArr.length; i++) {
+        if (subSArr[i] === 'hundred') {
+        retNum += 100 * subSArr[i-1];
+        }
+        else if (subSArr[i].includes('-')) {
+        let dashSplit = subSArr[i].split(''); 
+        retNum += numObj[dashSplit[0]] + numObj[dashSplit[1]];
+        retNum *= 1000;
+      } else if (!subArr[subArr.length - 1].includes('-')){
+        retNum += subArr[subArr.length - 1] 
+        retNum *= 1000;
+      }//five hundred forty-three thousand [two hundred fifty-six]
+//0 + 56 + (100) * 2
+//(5 * 100) + 40 + 3 * 1000
+      }
+      }
+    } else if (sArr[i] === 'hundred' && sArr[i-2] === 'thousand') {
+    let nxtSplit = sArr.split(sArr(i-1));
+    retNum += 100 * numObj[nxtSplit[0]]
+    if (nxtSplit[nxtSplit.length - 1].includes('-')) {
+    let dashSplit2 = nxtSplit[nxtSplit.length - 1].split('-');
+    retNum += numObj[dashSplit2[0]] + numObj[dashSplit2[1]]
+  
+    }
+    }
+  } return retNum
+}
+
+//?'s ret what for empty string?dashes always present on ifties? capitals vs lower???  are inputs valid? space/mem constraints?
+//edge cases: empty string =>0 
+//map out:
+//five hundred forty-three thousand two hundred fifty-six
+//0 + 56 + (100) * 2
+//(5 * 100) + 40 + 3 * 1000
+
+//if sArr[i] === thousand loop through //
+
+//loop through sArr split at - if in there and mult by ie forty...)
+// if sArr[i] === 'and' => continue//
+// if sArr[i].includes('-'):
+  //let dashSplit = sArr[i].split('') 
+  //ret_num*= numObj[dS[0]]
+  //ret_num += numObj[dashSplit[1]]
+//else:
+// ret_num *= numObj[sArr[i]]
+
+//
