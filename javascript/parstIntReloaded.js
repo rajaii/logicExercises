@@ -1,4 +1,4 @@
-//from codewars: https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5/train/javascript
+//from codewars 4kyu: https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5/train/javascript
 
 function parseInt(string) {
 
