@@ -44,3 +44,6 @@ class Solution:
     #increment counter
     
 #return fin_num1 * fin_num2
+
+# Runtime: 32 ms, faster than 83.88% of Python3 online submissions for Multiply Strings.
+# Memory Usage: 13.8 MB, less than 74.50% of Python3 online submissions for Multiply Strings.
