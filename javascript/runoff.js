@@ -3,7 +3,6 @@
 function runoff(voters){
   //set an array to count the first choices given by voters
    
-  console.log(voters)
   let counterArr = [];
   for (let i = 0; i < voters.length; i++) {
       counterArr.push(voters[i][0])
@@ -56,7 +55,7 @@ function runoff(voters){
     }  
   
   //check for tie
-  console.log(`tagcounts: ${tagCounts}`)
+  
   const allEqual = arr => arr.every(v => v === arr[0]);
   if (allEqual(tagCounts)) {
     return undefined
