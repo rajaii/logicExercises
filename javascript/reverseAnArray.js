@@ -3,7 +3,6 @@
 const reverse = a => {
     let counter = 1;
     let temp1;
-    console.log(a)
     for (let i = 0; i < a.length; i++) {
       if (i === a.length / 2 || a.length % 2 != 0 && i === Math.floor(a.length/2) ) {
         break
@@ -13,7 +12,7 @@ const reverse = a => {
       a[a.length-counter] = temp1
       counter += 1;
      
-    } console.log(a) 
+    } 
     return a
  }
  ;
