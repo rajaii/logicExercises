@@ -33,7 +33,7 @@ function solution(list){
         temp += 1
         counter += 1
         
-      }//[14, 15, 17, 18, 19, 20 ]
+      }
       if (temp === list.length -1) {
         rangeStr += `${list[temp]}`
       } else {
