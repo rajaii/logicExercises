@@ -23,6 +23,7 @@ def isPP(n):
     for i in range(2, n):
             if math.log(n, i) - int(math.log(n,i)) == 0:
                 return [i, int(math.log(n,i))]
+    return None
 
 
 
