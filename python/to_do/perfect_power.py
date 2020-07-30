@@ -13,8 +13,9 @@ def isPP(n):
     for i in range(2, n):
         n_dict.update({math.log(n, i): i})
     
-    for num in n_dict.values():
+    for num in n_dict.keys():
         if num - int(num) == 0:
+            #< .000000000000004
             return [n_dict[num], num]
 
 #still timing out refactor:
@@ -22,6 +23,7 @@ def isPP(n):
 def isPP(n):
     for i in range(2, n):
             if math.log(n, i) - int(math.log(n,i)) == 0:
+                #< .000000000000004
                 return [i, int(math.log(n,i))]
     return None
 
