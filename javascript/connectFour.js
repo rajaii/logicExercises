@@ -64,4 +64,8 @@ function connectFour(board) {
   //  ['-','-','-','Y','Y','R','Y'],
   //  ['-','-','-','Y','R','Y','Y'],
   //  ['-','-','Y','Y','R','R','R']]
+
+
+  ////refactor
+//board only has 6 rows so maybe can unnest the loops
   
