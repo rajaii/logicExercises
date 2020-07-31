@@ -64,4 +64,50 @@ function connectFour(board) {
   //  ['-','-','-','Y','Y','R','Y'],
   //  ['-','-','-','Y','R','Y','Y'],
   //  ['-','-','Y','Y','R','R','R']]
+
+
+  ////refactor
+//board only has 6 rows so maybe can unnest the loops
+//make 6 objects with obj[i] = board[1,2,3 etc][i] separately in for loops more code and space but less time 6 loops on board[1,2,...]
+//can run a loop on each obj and check conditionals against obj2[i+1], obj3[i - whatever etc]
+//code will be longer, but runtime down from o n^2 to o n
   
+function connectFour(board) {
+  let fullBoard = true;
+  let obj1 = {};
+  let obj2 = {};
+  let obj3 = {};
+  let obj4 = {};
+  let obj5 = {};
+  let obj6 = {};
+  
+    for (let i = 0; i < board[1].length; i++) {
+      obj1[i] = board[1][i]
+    }
+  
+    for (let i = 0; i < board[2].length; i++) {
+      obj2[i] = board[2][i]
+    }
+  
+  for (let i = 0; i < board[3].length; i++) {
+      obj3[i] = board[3][i]
+    }
+  
+  for (let i = 0; i < board[4].length; i++) {
+      obj4[i] = board[4][i]
+    }
+  
+  for (let i = 0; i < board[5].length; i++) {
+      obj5[i] = board[5][i]
+    }
+  
+  for (let i = 0; i < board[6].length; i++) {
+      obj6[i] = board[6][i]
+    }
+    
+   for (let key in obj1) {
+     
+   } 
+    
+    
+  }
