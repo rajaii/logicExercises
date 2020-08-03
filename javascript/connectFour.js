@@ -76,7 +76,6 @@ function connectFour(board) {
 //check verticals on obj 1-3
 //check diagonals on obj 1-3 (back diagonal all the way)(forward diagonal only to key ===3)
 
-
 function connectFour(board) {
   let fullBoard = true;
   let obj1 = {};
