@@ -71,7 +71,11 @@ function connectFour(board) {
 //make 6 objects with obj[i] = board[1,2,3 etc][i] separately in for loops more code and space but less time 6 loops on board[1,2,...]
 //can run a loop on each obj and check conditionals against obj2[i+1], obj3[i - whatever etc]
 //code will be longer, but runtime down from o n^2 to o n
-  
+
+//check horizontals on each obj
+//check verticals on obj 1-3
+//check diagonals on obj 1-3 (back diagonal all the way)(forward diagonal only to key ===3)
+
 function connectFour(board) {
   let fullBoard = true;
   let obj1 = {};
@@ -106,8 +110,116 @@ function connectFour(board) {
     }
     
    for (let key in obj1) {
-     
+     if (obj1[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj1[key] === 'R' && obj1[key + 1] === "R" && obj1[key + 2] === "R" && obj1[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj1[key] === 'Y' && obj1[key + 1] === "Y" && obj1[key + 2] === "Y" && obj1[key + 3] === "Y") {
+       return 'Y'
+     } 
    } 
+  //obj2
+  for (let key in obj2) {
+     if (obj2[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj2[key] === 'R' && obj2[key + 1] === "R" && obj2[key + 2] === "R" && obj2[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj2[key] === 'Y' && obj2[key + 1] === "Y" && obj2[key + 2] === "Y" && obj2[key + 3] === "Y") {
+       return 'Y'
+     } 
+   } 
+  //obj3
+  for (let key in obj3) {
+     if (obj3[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj3[key] === 'R' && obj3[key + 1] === "R" && obj3[key + 2] === "R" && obj3[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj3[key] === 'Y' && obj3[key + 1] === "Y" && obj3[key + 2] === "Y" && obj3[key + 3] === "Y") {
+       return 'Y'
+     } 
+   } 
+  //obj4
+  for (let key in obj4) {
+     if (obj4[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj4[key] === 'R' && obj4[key + 1] === "R" && obj4[key + 2] === "R" && obj4[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj4[key] === 'Y' && obj4[key + 1] === "Y" && obj4[key + 2] === "Y" && obj4[key + 3] === "Y") {
+       return 'Y'
+     } 
+   } 
+  //obj5
+  for (let key in obj5) {
+     if (obj5[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj5[key] === 'R' && obj5[key + 1] === "R" && obj5[key + 2] === "R" && obj5[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj5[key] === 'Y' && obj5[key + 1] === "Y" && obj5[key + 2] === "Y" && obj5[key + 3] === "Y") {
+       return 'Y'
+     } 
+   } 
+  //obj6
+  for (let key in obj6) {
+     if (obj6[key] === '-') {
+       fullBoard = false
+     } else if (key < 4 && obj6[key] === 'R' && obj6[key + 1] === "R" && obj6[key + 2] === "R" && obj6[key + 3] === "R") {
+       return 'R'
+     } else if (key < 4 && obj6[key] === 'Y' && obj6[key + 1] === "Y" && obj6[key + 2] === "Y" && obj6[key + 3] === "Y") {
+       return 'Y'
+     } 
+   } 
+  
+  for (let key in obj1) {
+    if (obj1[key] === 'R' && obj2[key] === 'R' && obj3[key] === 'R' && obj4[key] === 'R') {
+      return 'R';
+    } else if (obj1[key] === 'Y' && obj2[key] === 'Y' && obj3[key] === 'Y' && obj4[key] === 'Y') {
+      return 'Y';
+    } else if (key < 4 && obj1[key] === 'Y' && obj2[key + 1] === 'Y' && obj3[key+2] === 'Y' && obj4[key+3] === 'Y') {
+      return 'Y'
+    } else if (key < 4 && obj1[key] === 'R' && obj2[key + 1] === 'R' && obj3[key+2] === 'R' && obj4[key+3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj1[key] === 'R' && obj2[key-1] === 'R' && obj3[key-2] ==='R' && obj4[key-3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj1[key] === 'Y' && obj2[key-1] === 'Y' && obj3[key-2] ==='Y' && obj4[key-3] === 'Y') {
+      return 'Y'
+    }
+  }
+  
+  for (let key in obj2) {
+    if (obj2[key] === 'R' && obj3[key] === 'R' && obj4[key] === 'R' && obj5[key] === 'R') {
+      return 'R';
+    } else if (obj2[key] === 'Y' && obj3[key] === 'Y' && obj4[key] === 'Y' && obj5[key] === 'Y') {
+      return 'Y';
+    } else if (key < 4 && obj2[key] === 'Y' && obj3[key + 1] === 'Y' && obj4[key+2] === 'Y' && obj5[key+3] === 'Y') {
+      return 'Y'
+    } else if (key < 4 && obj2[key] === 'R' && obj3[key + 1] === 'R' && obj4[key+2] === 'R' && obj5[key+3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj2[key] === 'R' && obj3[key-1] === 'R' && obj4[key-2] ==='R' && obj5[key-3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj2[key] === 'Y' && obj3[key-1] === 'Y' && obj4[key-2] ==='Y' && obj5[key-3] === 'Y') {
+      return 'Y'
+    }
+  }
+  
+  for (let key in obj3) {
+    if (obj3[key] === 'R' && obj4[key] === 'R' && obj5[key] === 'R' && obj6[key] === 'R') {
+      return 'R';
+    } else if (obj3[key] === 'Y' && obj4[key] === 'Y' && obj5[key] === 'Y' && obj6[key] === 'Y') {
+      return 'Y';
+    } else if (key < 4 && obj3[key] === 'Y' && obj4[key + 1] === 'Y' && obj5[key+2] === 'Y' && obj6[key+3] === 'Y') {
+      return 'Y'
+    } else if (key < 4 && obj3[key] === 'R' && obj4[key + 1] === 'R' && obj5[key+2] === 'R' && obj6[key+3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj3[key] === 'R' && obj4[key-1] === 'R' && obj5[key-2] ==='R' && obj6[key-3] === 'R') {
+      return 'R'
+    } else if (key > 2 && obj3[key] === 'Y' && obj4[key-1] === 'Y' && obj5[key-2] ==='Y' && obj6[key-3] === 'Y') {
+      return 'Y'
+    }
+  }
     
-    
+    if (fullBoard) {
+      return 'draw'
+    } else {
+      return 'in progress'
+    }
   }
