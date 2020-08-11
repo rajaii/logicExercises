@@ -1,10 +1,13 @@
 //From leetcode Medium: https://leetcode.com/problems/xor-queries-of-a-subarray/
-let retArr = [];
-
+let retArr = []
 var xorQueries = function(arr, queries) {
-
+    
     if (queries.length === 0) {
-        let temp = retArr 
+        let temp = []
+        for (let i = 0; i < retArr.length; i++) {
+            temp.push(retArr[i])
+        }
+        retArr.splice(0)
         return temp 
     }
     
