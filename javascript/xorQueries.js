@@ -30,6 +30,34 @@ var xorQueries = function(arr, queries) {
     
 };
 
+//============================================================================ FIRST PASS V:
+//REFACTOR RECURSION TO LEARN THE VARIABLE PERSISTANCE BUG HAVE HAD IT TWICE  ^,  ALSO IMPROVE RUNTIME.
+
+
+var xorQueries = function(arr, queries) {
+    var retArr = []
+
+    for (let i = 0; i < queries.length; i++) {
+        xor = 0
+       
+        for(let j = queries[i][0]; j <= queries[i][1]; j++) {
+            xor = xor ^ arr[j]
+            
+            if (j === queries[i][1]) {
+                retArr.push(xor)
+            }
+        }
+        
+    }
+    return retArr
+    
+    
+    
+    
+    
+};
+
+
 //edge cases: empty arr, or no queries
 //?'s: limits on time/space? how to handle empty queries or arr? 
 
