@@ -11,9 +11,6 @@ var xorQueries = function(arr, queries) {
         return temp 
     }
     
-    if (arr.length === 1) {
-        //populate later
-    }
     
     let query = queries[0];
     let rest = queries.splice(1);
