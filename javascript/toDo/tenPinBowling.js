@@ -24,7 +24,12 @@ console.log(frames)
           currentScore += parseInt(scoreArr[i][2])
       } else if (scoreArr[i][1] === '/' && scoreArr[i][2] === 'X') {
           currentScore += 20
-      } else {
+      } else if (scoreArr[i][0] === 'X' && scoreArr[i][1] === 'X' && scoreArr[i][2] != 'X') {
+        currentScore += 20
+        currentScore += parseInt(scoreArr[i][2], 10)
+      }
+      
+      else {
           currentScore += parseInt(scoreArr[i][0])
           currentScore += parseInt(scoreArr[i][1])
       }
@@ -32,7 +37,7 @@ console.log(frames)
     
     //.includes
     else if (i === 8) {
-      if (scoreArr[i+1][0] === 'X' && scoreArr[i+1][1] === 'X' && scoreArr[i+1][2] === 'X') {
+      if (scoreArr[i+1][0] === 'X' && scoreArr[i+1][1] === 'X') {
         if (scoreArr[i] === 'X') {
           currentScore += 30
         } else if (scoreArr[i][1] === '/') {
@@ -40,8 +45,30 @@ console.log(frames)
         } else {
           currentScore += parseInt(scoreArr[i][0], 10)
           currentScore += parseInt(scoreArr[i][1], 10)
-        } 
-      } else if (scoreArr[i+1][1] === '/') {
+        }  //    6/    
+      } else if (scoreArr[i+1][0] === 'X' && scoreArr[i+1][1] != 'X') {
+        if (scoreArr[i] === 'X') {
+          currentScore += 20
+          currentScore += parseInt(scoreArr[i+1][1], 10)
+        } else if (scoreArr[i][1] === '/') {
+          currentScore += 20
+        } else {
+          currentScore += parseInt(scoreArr[i][0], 10)
+          currentScore += parseInt(scoreArr[i][1], 10)
+        }
+      } else if (scoreArr[i+1][0] === 'X' && scoreArr[i+1][0] === '/' && scoreArr[i+1][1] === '/') {
+        if (scoreArr[i] === 'X') {
+          currentScore += 20
+        } else if (scoreArr[i][1] === '/') {
+          currentScore += 10
+          currentScore += parseInt(scoreArr[i+1][0], 10)
+        } else {
+          currentScore += parseInt(scoreArr[i][0], 10)
+          currentScore += parseInt(scoreArr[i][1], 10)
+        }
+      }
+      
+      else if (scoreArr[i+1][1] === '/') {
         if (scoreArr[i] === 'X') {
           currentScore += 20
         } else if (scoreArr[i][1] === '/') {
@@ -95,7 +122,8 @@ console.log(frames)
   
  }   return currentScore 
 }
-  
+
+ console.log(bowlingScore('16 23 81 10 42 63 45 X X 34')) 
   
   
 
