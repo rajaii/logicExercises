@@ -182,3 +182,7 @@ console.log(frames)
 //recursive solution:
 
 console.log(parseInt('0',10))
+
+
+
+30, 10, 10, 10, 8, 8, 30, 10, 9, 9, 10, 7, 10, 4, 8
