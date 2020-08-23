@@ -138,4 +138,5 @@ var robotSim = function(commands, obstacles) {
 
 
 //now we have stops return (x-0) ^2 + (y-0) ^2
-
+obstacles = [[2,4]]
+console.log(obstacles.filter(o => o[0] === 2 && o[1] ===4).length)
