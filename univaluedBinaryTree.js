@@ -2,9 +2,6 @@
 
 
 var isUnivalTree = function(root) {
-    if (root === 0) {
-        return 
-    } 
     
     let queue = [root]
    
