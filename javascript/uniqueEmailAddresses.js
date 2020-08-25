@@ -130,4 +130,36 @@ var numUniqueEmails = function(emails) {
 //go through and push the updated emails into a set
 //return the size of the set
 
-console.log(str.replace('.', ''))
+//=================================================================Second pass refactor
+
+var numUniqueEmails = function(emails) {
+    let emailSet = new Set();
+       
+    for (let i = 0; i < emails.length; i++) {
+        let atIndex = emails[i].indexOf('@');
+        let plusIndex = emails[i].indexOf('+') > -1 ? emails[i].indexOf('+') : atIndex;
+        
+        let local = emails[i].slice(0, plusIndex);
+        let domain = emails[i].slice(atIndex);
+        let regex = /\./g;
+        local = local.replace(regex, '');
+        local += domain
+        emailSet.add(local)
+    }
+    console.log(emailSet)
+    return emailSet.size
+        
+
+    
+};
+
+//?'s: limits on time/space
+//edge cases: 1 email, return 1 
+
+
+//loop each email
+//break into local and domain
+//split local off from +
+//use regex and replace to rid of .'s'
+//concat the 2 and add to set
+//return set.length
