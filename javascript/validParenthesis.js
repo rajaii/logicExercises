@@ -1,7 +1,7 @@
+//from leetcode easy: https://leetcode.com/problems/valid-parentheses/
+
 var isValid = function(s) {
-    if (s.length === 0) {
-        return true
-    }
+    
     const stack = [];
     
     let parenObj = {
@@ -10,14 +10,12 @@ var isValid = function(s) {
         '}': '{'    
     }
 
-    if (s.length > 1) {
+    
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '[' || s[i] === '{' || s[i] === '(') {
             stack.push(s[i]);
         } else if (s[i] === ']' || s[i] === '}' || s[i] === ')') {
             if (stack.pop() === parenObj[s[i]]) {
-                console.log(parenObj[s[i]])
-                // stack.pop();
                 continue;
             } else {
                 return false;
@@ -32,9 +30,7 @@ var isValid = function(s) {
     } else {
         return false
     }
-    } else {
-        return false
-    }
+    
     
 };
 
@@ -56,3 +52,7 @@ var isValid = function(s) {
 
 //second round, use stack add openings, pop off end on closings looping whole s
 // if stack is empty return true at end if not return false
+
+
+
+
