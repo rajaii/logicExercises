@@ -2,10 +2,7 @@
 
 
 var isPerfectSquare = function(num) {
-    if ((num ** (1/2)) % 1 === 0) {
-        return true
-    }
-    return false
+    return (num ** (1/2)) % 1 === 0 && true; 
 };
 
 //edge cases: num == 1
