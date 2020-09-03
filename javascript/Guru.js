@@ -27,6 +27,11 @@ function countWords(string, word) {
     return count;
 }
 
+console.log(countWords("Hello world", 'world'));
+console.log(countWords("The tiny fox bit the big fox", 'fox'));
+console.log(countWords('Hello world world','world'));
+console.log(countWords("Hello HELLo hello world World", "hello"));
+
 /*
 QUESTION 2:
 Given a list of numbers, describe how you would find the sum of the squares of the numbers in the list.
@@ -40,8 +45,12 @@ Example 2: numbers - [ 0, 8, 1 ], result - 65
 
 function findSumOfSquares (arrayOfNums) {
     //Use built in reduce function to add each square of each value in arrayOfNums and return the result
-    return arrayOfNums.reduce((a,c) => a + c ** 2, 0)
+    return arrayOfNums.reduce((a,c) => a + c ** 2, 0);
 }
+
+console.log(findSumOfSquares([ 4, 3, 12, 6 ]));
+console.log(findSumOfSquares([ 0, 8, 1 ]));
+console.log(findSumOfSquares([12,44,22,33]));
 
 /*
 BONUS QUESTION:
@@ -95,28 +104,34 @@ function calculateNewDate(startDate, duration) {
 
     //run the appropriate Date function and return the date, 
     for (let i = 0; i < durationArr.length; i++) {
-        if (durationArr[i] === 'second' || durationArr[i] === 'seconds') {
+        if (durationArr[i] === 'second' || durationArr[i] === 'seconds' || durationArr[i] === 'second,' || durationArr[i] === 'seconds,') {
         date.addSeconds(parseInt(durationArr[i-1], 10));
-        } else if (durationArr[i] === 'minute' || durationArr[i] === 'minutes') {
+        } else if (durationArr[i] === 'minute' || durationArr[i] === 'minutes' || durationArr[i] === 'minute,' || durationArr[i] === 'minutes,') {
             date.addMinutes(parseInt(durationArr[i-1], 10));
-        } else if (durationArr[i] === 'hour' || durationArr[i] === 'hours') {
+        } else if (durationArr[i] === 'hour' || durationArr[i] === 'hours' || durationArr[i] === 'hour,' || durationArr[i] === 'hours,') {
             date.addHours(parseInt(durationArr[i-1], 10));
-        } else if (durationArr[i] === 'day' || durationArr[i] === 'days') {
+        } else if (durationArr[i] === 'day' || durationArr[i] === 'days' || durationArr[i] === 'day,' || durationArr[i] === 'days,') {
             date.addDays(parseInt(durationArr[i-1], 10));
-        } else if (durationArr[i] === 'month' || durationArr[i] === 'months') {
+        } else if (durationArr[i] === 'month' || durationArr[i] === 'months' || durationArr[i] === 'month,' || durationArr[i] === 'months,') {
             date.addMonths(parseInt(durationArr[i-1], 10));
-        } else if (durationArr[i] === 'year' || durationArr[i] === 'years') {
+        } else if (durationArr[i] === 'year' || durationArr[i] === 'years' || durationArr[i] === 'year,' || durationArr[i] === 'years,') {
             date.addYears(parseInt(durationArr[i-1], 10));
         } else {
             continue
         }
     }
     
-      return date
+      return date.toISOString();
+
 
 
 }
 
+console.log(calculateNewDate("2020-07-17 13:21:34", "10 days"))
+console.log(calculateNewDate("2020-07-17 13:21:34", "10 minutes"))
+console.log(calculateNewDate("2020-07-17 13:21:34", "10 Minutes"))
+console.log(calculateNewDate("2020-07-17 13:21:34", "10 days 3 minutes 2 SEconds"))
+console.log(calculateNewDate("2020-07-17 13:21:34", "10 days 3 minutes and 2 seconds"))
 
 
 
