@@ -2,7 +2,9 @@
 
 
 var convert = function(s, numRows) {
-   
+    if (numRows < 2) {
+        return s
+    }
     //set the to be 2d array and the counter and boolean 
     let arr = [];
     let arrCounter = 0;
@@ -13,6 +15,8 @@ var convert = function(s, numRows) {
         arr[i] = [];
     }
     
+    //loop s and add s[i] int arr accordingly both setting and using the goBackwards and 
+    //arrCounter to cause the zigzag push pattern
     for (let i = 0; i < s.length; i++) {
         arr[arrCounter].push(s[i]);
         
@@ -31,6 +35,8 @@ var convert = function(s, numRows) {
         }
         
     }
+    
+    //set a string and concatenate each arr value's join in there and then return the string
     let retStr = '';
     for (let i = 0; i < arr.length; i++) {
         retStr += arr[i].join('');
@@ -66,4 +72,3 @@ var convert = function(s, numRows) {
 //loop arr
 //retStr += arr[i]
 //return retStr
-
