@@ -7,11 +7,12 @@ var wordSubsets = function(A, B) {
     let retArr = [];
     
     for (let i = 0; i < A.length; i++) {
+        BPassCounter = 0;
         for (let j = 0; j < B.length; j++) {
-          for (let k = 0; k < B[j].length; k++) {
-              letterCounter = A[i].split('');
-              if (A[i].includes(B[j][k])) {
-                  letterCounter.splice(letterCounter.indexOf(B[j][k], 0));
+        letterCounter = A[i].split('');
+          for (let k = 0; k < B[j].length; k++) {  
+              if (letterCounter.includes(B[j][k])) {
+                  delete letterCounter[letterCounter.indexOf(B[j][k])]
                   continue; 
               } else {
                   hasBroken = true;
@@ -25,11 +26,9 @@ var wordSubsets = function(A, B) {
                 BPassCounter += 1;
             }
         }
-        if (BPassCounter = B.length - 1) {
+        if (BPassCounter === B.length) {
             retArr.push(A[i])
-        } else {
-            continue
-        }
+        } 
     }
     return retArr
 };
@@ -63,3 +62,8 @@ var wordSubsets = function(A, B) {
 //else continue
 
 //return retArr
+
+const arr = ['f','a','c','e','b','o','o','k']
+arr.splice(arr.indexOf('e'), 1)
+
+console.log(arr)
