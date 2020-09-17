@@ -63,7 +63,3 @@ var wordSubsets = function(A, B) {
 
 //return retArr
 
-const arr = ['f','a','c','e','b','o','o','k']
-arr.splice(arr.indexOf('e'), 1)
-
-console.log(arr)
