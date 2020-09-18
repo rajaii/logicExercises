@@ -63,3 +63,48 @@ var wordSubsets = function(A, B) {
 
 //return retArr
 
+var wordSubsets = function(A, B) {
+    let BStr = ''
+    
+    let BStrCount = 0;
+    let BICount = 0;
+    let hasAdded = false;
+    for (let i = 0; i < B.length; i++) {
+        //may need to move
+        BStrCount = 0;
+        BICount = 0
+        for (let j = 0; j < B[i].length; j++) {
+        if (!Bstr.includes(B[i][j])) {
+        Bstr += B[i][j];
+        } else {
+           //loop bStr and count how many in there count how many in B[i] concat however                //many more there are in B[i] in to Bsrt => concat by using a helper fnc
+            for (let k = 0; k < Bstr.length; k++) {
+                if (Bstr[k] === B[i][j]) {
+                    BStrCount += 1;
+                }
+            } for (let k = j+1; k < B[i].length; k++) {
+                if (B[i][k] === B[i][j]) {
+                   BICount += 1; 
+                }
+            }
+        }
+    }
+        } 
+    
+    
+};
+
+//?'s: limits on time/space?  
+//edge cases: b[i].length <= 1 || a[i].length <= 1
+
+//refactor Pseudo to improve runtime:
+//combine b into 1 string then run single nested loop
+//loop B, BSrt
+//if not in there add to Bstr
+//if so we need to check the count of Bstr
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Bstr should contain all Elements in B except for duplicates between B[i]'s meaning if a 
+//B[i] has a char it should not repeat again unless it has multiple occurences in another //B[i]
+
+//break this up into an array
+//loop A and check if A[i].includes(BArr[j])
