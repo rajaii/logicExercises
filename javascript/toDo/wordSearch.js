@@ -1,5 +1,4 @@
 //from leetcode medium https://leetcode.com/problems/word-search/
-
 var exist = function(board, word) {
     //transform word to upper case 
     let w = word.toUpperCase();
@@ -13,38 +12,53 @@ var exist = function(board, word) {
             let currentI = i;
             let currentJ = j;
             let visited = [];
+            let prevI;
+            let prevJ;
             let queue = [...startQueue];
             
             while (board[currentI][currentJ] === queue.shift()) {
-                queue.shift();
-                visited.push([currentI, currentJ]);
-                
+               visited.push([currentI, currentJ]);
+               console.log(visited)
                 if (queue.length === 0) {
                     return true;
                 } 
                 
-                else if (board[currentI + 1] != undefined && board[currentI + 1][currentJ] === queue.shift() && !visited.includes([currentI + 1, currentJ])) {
+                else if (board[currentI + 1] != undefined && board[currentI + 1][currentJ] === queue[0] && visited.find(a => a[0] === currentI + 1 && a[1] === currentJ) === undefined){                   prevI = currentI;
+                    prevJ = currentJ;
                     currentI += 1;
                     continue;          
                 } 
                 
-                else if (board[currentI - 1] != undefined && board[currentI - 1][currentJ] === queue.shift() && !visited.includes([currentI - 1, currentJ])) {    
+              else if (board[currentI - 1] != undefined && board[currentI - 1][currentJ] === queue[0] && visited.find(a => a[0] === currentI - 1 && a[1] === currentJ) === undefined){ 
+                prevI = currentI;
+                prevJ = currentJ;
                 currentI -= 1;
                 continue;     
                 }
                 
-                else if (board[currentI][currentJ + 1] != undefined && board[currentI][currentJ + 1] === queue.shift() && !visited.includes([currentI, currentJ + 1])) {
+                else if (board[currentI][currentJ + 1] != undefined && board[currentI][currentJ + 1] === queue[0] && visited.find(a => a[0] === currentI && a[1] === currentJ + 1) === undefined)  {
+                prevI = currentI;
+                prevJ = currentJ; 
                 currentJ += 1;
                 continue;   
                 }
                 
-                else if (board[currentI][currentJ - 1] != undefined && board[currentI][currentJ - 1] === queue.shift() && !visited.includes([currentI, currentJ - 1])) {
+                else if (board[currentI][currentJ - 1] != undefined && board[currentI][currentJ - 1] === queue[0] && visited.find(a => a[0] === currentI && a[1] === currentJ - 1) === undefined)  {
+                prevI = currentI;
+                prevJ = currentJ;
                 currentJ -= 1;
                 continue;      
                 }
                 
                 else {
-                    break;
+                    if (prevI != undefined && prevJ != undefined && (visited.find(a => a[0] === prevI + 1 && a[1] === prevJ) === undefined || visited.find(a => a[0] === prevI - 1 && a[1] === prevJ) === undefined || visited.find(a => a[0] === prevI || a[1] === prevJ + 1) === undefined || visited.find(a => a[0] === prevI && a[1] === prevJ - 1) === undefined)) {
+                        visited.push([currentI, currentJ]);
+                        queue.unshift(board[currentI][currentJ])
+                        currentI = prevI;
+                        currentJ = prevJ;
+                    } else {
+                        break;
+                    }
                 }
                 
             }
@@ -96,3 +110,12 @@ var exist = function(board, word) {
 // else break;
 
 //return false
+
+// ["C","A","A"]
+// ["A","A","A"]
+// ["B","C","D"]
+
+//starts at 1,1 then goes back to 0,1 instead of 1,0 and 2,0 to return true
+//else if (visited does not have aall the surrounding values pf previous)
+//visited.push(current values references)
+//return to previous and run again
