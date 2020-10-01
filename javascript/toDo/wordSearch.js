@@ -51,7 +51,7 @@ var exist = function(board, word) {
                 }
                 
                 else {
-                    if (prevI != undefined && prevJ != undefined && (visited.find(a => a[0] === prevI + 1 && a[1] === prevJ) === undefined || visited.find(a => a[0] === prevI - 1 && a[1] === prevJ || visited.find(a => a[0] === prevI || a[1] === prevJ + 1 || visited.find(a => a[0] === prevI && a[1] === prevJ - 1) === undefined) === undefined)) === undefined) {
+                    if (prevI != undefined && prevJ != undefined && (visited.find(a => a[0] === prevI + 1 && a[1] === prevJ) === undefined || visited.find(a => a[0] === prevI - 1 && a[1] === prevJ) === undefined || visited.find(a => a[0] === prevI || a[1] === prevJ + 1) === undefined || visited.find(a => a[0] === prevI && a[1] === prevJ - 1) === undefined)) {
                         visited.push([currentI, currentJ]);
                         queue.unshift(board[currentI][currentJ])
                         currentI = prevI;
