@@ -6,13 +6,13 @@ var kWeakestRows = function(mat, k) {
     for (let i = 0; i < mat.length; i++) {
         counterObj[i] = mat[i].reduce((a,c) => a + c, 0);
     }
-    console.log(counterObj)
+    
     let sortable = [];
     for (let key in counterObj) {
         sortable.push([parseInt(key, 10), counterObj[key]]);
     }
     sortable.sort((a, b) => a[1] - b[1]);
-    console.log(sortable)
+
     
     //set return array and push into it by looping sortable to k and pushing into it with a     //nested while loop with logic to handle cases of equal soldiers
     let retArr = [];
