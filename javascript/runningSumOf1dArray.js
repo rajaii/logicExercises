@@ -27,3 +27,17 @@ var runningSum = function(nums) {
 //inc += nums[i]
 
 //return retArr
+
+//refactor
+
+var runningSum = function(nums) {
+    //set the incrementor to add to each num[i] and the retArr to push into and then return
+    let inc = 0;
+    
+    //return map on nums adding each num to inc 
+    return nums.map(n => {
+        let ret = n + inc;
+        inc += n;
+        return ret
+    });
+};
