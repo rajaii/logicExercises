@@ -52,4 +52,3 @@ function convertQueryToMap(query) {
   //^ logic was flawed beacause did not nest properly, thought of using a queue, but then 
   //refactored to use eval run on  astring that is concatted to adding to get to 'retObj[sub[j]]...[subSub[0]] = subSub[1]'
   
-  
