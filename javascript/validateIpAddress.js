@@ -11,14 +11,15 @@ var validIPAddress = function(IP) {
         if (ip.length != 4) {
             return 'Neither'
         } else {
-            //loop ip seeing that each ip[i] matches the proper form to be in an IPv4                   //address
+            //loop ip seeing that each ip[i] matches the proper form to be in an IPv4 address
             for (let i = 0; i < ip.length; i++) {
                 //check for anything but digits
                 if (ip[i].search(/\D+/) != -1) {
                     return 'Neither';
                 } else {
+                    '0'
                     //check for leading 0's or improperly placed 0's ie. 00
-                    if ((ip[i][0] === '0' && ip[i][1] != '0') || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] != 0) || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] === undefined) || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] === '0')) {
+                    if ((ip[i][0] === '0' && ip[i][1] != '0' && ip[i][1] != undefined) || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] != 0) || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] === undefined) || (ip[i][0] === '0' && ip[i][1] === '0' && ip[i][2] === '0')) {
                         return 'Neither';
                     } else {
                        //check to see if they 0 <= ip[i] <= 255
@@ -47,13 +48,12 @@ var validIPAddress = function(IP) {
              if (ip.length != 8) {
                  return 'Neither';
              } else {
-                //loop ip seeing that each ip[i] matches the proper form to be in an IPv6                   //address
+                //loop ip seeing that each ip[i] matches the proper form to be in an IPv6 address
                 for (let i = 0; i < ip.length; i++) {
                     //check if each ip[i] is of proper length
                     if (ip[i].length < 1 || ip[i].length > 4) {
                         return 'Neither';
                     } else {
-                        ////!!!!!!!!!!!!!!!!!!!!!
                         //if ip[i] has anything but numbers or letters a-f return Neither
                         if (ip[i].search(/[g-z]/) != -1 || ip[i].search(/\W+/) != -1 || ip[i].search(/[G-Z]/) != -1) {
                             return 'Neither'
@@ -75,19 +75,6 @@ var validIPAddress = function(IP) {
         return 'Neither'
     }
     
-
-
-
-
-//else if i === ip.length - 1 ipv6 = true
-//else continue
-
-//if ipv6
-//return 'IPv6'
-
-
-//else 
-//return 'Neither'
 };
 
 //?'s: limits on time/space complexity, limits on 
