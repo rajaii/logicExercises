@@ -10,18 +10,18 @@ var subtractProductAndSum = function(n) {
     let nStr = n.toString();
     let arr = nStr.split('');
     let nArr = arr.map(s => parseInt(s, 10));
-    console.log(nArr)
+    
     
     //loop nArr twice, once setting sums to the sum of sums plus each value of nArr, and         
     //once setting products to the product of product and each value of nArr
     for (let i = 0; i < nArr.length; i++) {
         sums += nArr[i];
     }
-    console.log(sums)
+    
     for (let i = 0; i < nArr.length; i++) {
         products *= nArr[i];
     }
-    console.log(products)
+    
     return products - sums
     
     
