@@ -1,17 +1,19 @@
-https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integerhttps://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integerhttps://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer// from leetcode easy
+//from leetcode easy: https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer// 
 
 var subtractProductAndSum = function(n) {
     //set the variables to increment and then return the differences on 
     let sums = 0;
     let products = 1;
     
-    //stringfy n, and then split into an array, and then map that array turning strings into     //ints
+    //stringfy n, and then split into an array, and then map that array turning strings into     
+    //ints
     let nStr = n.toString();
     let arr = nStr.split('');
     let nArr = arr.map(s => parseInt(s, 10));
     console.log(nArr)
     
-    //loop nArr twice, once setting sums to the sum of sums plus each value of nArr, and         //once setting products to the product of product and each value of nArr
+    //loop nArr twice, once setting sums to the sum of sums plus each value of nArr, and         
+    //once setting products to the product of product and each value of nArr
     for (let i = 0; i < nArr.length; i++) {
         sums += nArr[i];
     }
