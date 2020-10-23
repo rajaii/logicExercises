@@ -58,29 +58,6 @@ var getStrongest = function(arr, k) {
     }
     
 
-
-    
-    //loop to k and for each i determine which is strongest and push into k strongest
-//     let temp;
-//     let h = [{0:0}];
-//     for (let i = 0; i < k; i++) {
-//         for (let j = 0; j < ver.length; j++) {
-//              if (Object.values(ver[j])[0] > Object.values(h[h.length -1])[0]) {
-//                  h.push(ver[j]);
-//                  temp = j
-//              } else if (Object.values(ver[j])[0] === Object.values(h[h.length -1])[0]) {
-//                  if (parseInt(Object.keys(ver[j])[0], 10) > parseInt(Object.keys(h[h.length-1])[0]),10) {
-//                      h.push(ver[j]);
-//                      temp = j
-//                  } 
-//              } 
-//         }
-
-
-//         kStrongest.push(Object.keys(h[h.length-1])[0]);
-//         ver.splice(temp, 1);
-//         h.splice(1);
-//     }
     
     return kStrongest;
     
