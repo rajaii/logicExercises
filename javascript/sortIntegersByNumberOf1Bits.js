@@ -1,18 +1,16 @@
 //from leetcode easy https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
 
 var sortByBits = function(a) {
-      return a.sort((a, b) => {
-                let a1s = a.toString(2).split('').map(i => parseInt(i)).reduce((a,c) => a + c, 0);
-                let b1s = b.toString(2).split('').map(i => parseInt(i)).reduce((a,c) => a + c, 0);
-                if (a1s === b1s) {
-                    return a - b;
-                } else {
-                    return a1s - b1s;
-                }
-            })
-            
-            
-        };
+    return a.sort((a, b) => {
+        let a1s = a.toString(2).split('').reduce((a,c) => parseInt(a) + parseInt(c), 0);
+        let b1s = b.toString(2).split('').reduce((a,c) => parseInt(a) + parseInt(c), 0);
+        if (a1s === b1s) {
+            return a - b;
+        } else {
+            return a1s - b1s;
+        }
+    })
+};
         
     
     
