@@ -1,22 +1,10 @@
 //from leetcode easy: https://leetcode.com/problems/student-attendance-record-i
 
 var checkRecord = function(s) {
-    //set counters to count A and L
-    let ACounter = 0;
-    
-    //loop s checking if s[i] === L or A and increment the respictive counter
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] === 'L' && s[i+1] === 'L' && s[i+2] === 'L') {
-        return false;           
-        } else if (s[i] === 'A') {
-            ACounter += 1;
-        } if (ACounter >= 2) {
-            return false;
-        }
-    }
-    
-    //return true if made it outside the loop\
-    return true;
+
+        const regx = /(A.*A)|L{3}/g;
+        return !regx.test(s);
+      
 };
 
 //edge cases: last A or L at end of s, all P's As or L's, empty string, s.length lower than 4
@@ -31,3 +19,5 @@ var checkRecord = function(s) {
 
 //outside loop:
 //return true
+
+
