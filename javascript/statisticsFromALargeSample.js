@@ -30,7 +30,7 @@ var sampleStats = function(count) {
             medArr.push(parseInt(key, 10));
         }
     }
-    medArr.sort();
+    medArr.sort((a, b) => a - b);
     console.log(medArr)
     let median;
     if (medArr.length % 2 === 0) {
