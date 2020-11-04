@@ -19,9 +19,7 @@ var sampleStats = function(count) {
         iter += 1;
     }
   
-    const sum = amts.reduce((a,c) => a+c, 0);
-    
-    
+    const sum = amts.reduce((a,c) => a+c, 0);    
     const divisor = Object.values(countObj).reduce((a,c) => a+c, 0);
     const mean = sum / divisor;
    
@@ -54,16 +52,10 @@ var sampleStats = function(count) {
     for (let i = 0; i < count.length; i++) {
         if (count[i] > 0) {
             c += count[i];
-            console.log('medIndex', medIndex);
-            console.log(medIndex > oldCount)
-            console.log('old',oldCount)
-            console.log(medIndex <= c)
-            console.log('c',c)
             if (odd && medIndex != undefined && medIndex > oldCount && medIndex <= c) {
                 median = i;
                 break;
             } else if (even && medIndexB != undefined && medIndexA != undefined && medIndexA === c - count[i] && medIndexB === ((c - count[i]) + 1)) {
-                console.log('in')
                 median = ((i - 1) + i) / 2;
                 break;
             } else if (even && medIndexB != undefined && medIndexA != undefined && medIndexA > oldCount && medIndexA <= c && medIndexB > oldCount && medIndexB <= c ) {
@@ -91,8 +83,4 @@ var sampleStats = function(count) {
 //convert stats to floats of 10^-5 using toFixed(5)
 //return array with the floats of stats
 
-function arb (i) {
-    console.log(i)
-}
 
-arb('hi') * 3;
