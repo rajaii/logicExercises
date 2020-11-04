@@ -1,4 +1,4 @@
-//from leetcode medium: https://leetcode.com/problems/statistics-from-a-large-sample/
+// //from leetcode medium: https://leetcode.com/problems/statistics-from-a-large-sample/
 
 var sampleStats = function(count) {
     //make object to track the numbers and their occurrences
@@ -10,42 +10,71 @@ var sampleStats = function(count) {
     }
     
     //caculate stats
-    let min = Math.min(...Object.keys(countObj));
-    let max = Math.max(...Object.keys(countObj));
-    let amts = []
+    const min = Math.min(...Object.keys(countObj));
+    const max = Math.max(...Object.keys(countObj));
+    const amts = []
     let iter = 0;
     for (let key in countObj) {
         amts[iter] = parseInt(key, 10) * countObj[key];
         iter += 1;
     }
   
-    let sum = amts.reduce((a,c) => a+c, 0);
+    const sum = amts.reduce((a,c) => a+c, 0);
     
-    let divisor = Object.values(countObj).reduce((a,c) => a+c, 0);
-    let mean = sum / divisor;
+    
+    const divisor = Object.values(countObj).reduce((a,c) => a+c, 0);
+    const mean = sum / divisor;
    
-    let medArr = [];
-    for (let key in countObj) {
-        for (let i = 0; i < countObj[key]; i++) {
-            medArr.push(parseInt(key, 10));
-        }
-    }
-    medArr.sort((a, b) => a - b);
-    console.log(medArr)
-    let median;
-    if (medArr.length % 2 === 0) {
-        median = (medArr[medArr.length / 2 - 1] + medArr[medArr.length / 2]) / 2;
-    } else {
-        median = medArr[Math.floor(medArr.length / 2)];
-    }
-    console.log(median)
-    let modeVal = Math.max(...Object.values(countObj));
+    const modeVal = Math.max(...Object.values(countObj));
     let mode;
     for (let key in countObj) {
         if (countObj[key] === modeVal) {
             mode = parseInt(key, 10);
         }
      }
+    let countSum = count.reduce((a,c) => a+c,0);
+    
+    let median;
+    let even = false;
+    let odd = false;
+    let medIndex;
+    let medIndexA;
+    let medIndexB;
+    if (countSum % 2 === 0) {
+        even = true;
+        medIndexA = countSum / 2;
+        medIndexB = (countSum / 2) + 1;
+    } else {
+        odd = true;
+        medIndex = Math.ceil(countSum / 2);    
+     }
+    
+    let c = 0;
+    let oldCount = 0;
+    for (let i = 0; i < count.length; i++) {
+        if (count[i] > 0) {
+            c += count[i];
+            console.log('medIndex', medIndex);
+            console.log(medIndex > oldCount)
+            console.log('old',oldCount)
+            console.log(medIndex <= c)
+            console.log('c',c)
+            if (odd && medIndex != undefined && medIndex > oldCount && medIndex <= c) {
+                median = i;
+                break;
+            } else if (even && medIndexB != undefined && medIndexA != undefined && medIndexA === c - count[i] && medIndexB === ((c - count[i]) + 1)) {
+                console.log('in')
+                median = ((i - 1) + i) / 2;
+                break;
+            } else if (even && medIndexB != undefined && medIndexA != undefined && medIndexA > oldCount && medIndexA <= c && medIndexB > oldCount && medIndexB <= c ) {
+            median = i;
+            break;
+            } else {
+                oldCount += count[i];
+            } 
+        }
+    }
+   
     
     
     //convert into floats of form 10 ^ -5 limit
@@ -62,4 +91,8 @@ var sampleStats = function(count) {
 //convert stats to floats of 10^-5 using toFixed(5)
 //return array with the floats of stats
 
+function arb (i) {
+    console.log(i)
+}
 
+arb('hi') * 3;
