@@ -7,16 +7,15 @@ var selfDividingNumbers = function(left, right) {
     
     //loop from left to right checking if each num is self-dividing, and pushing into retArr if so
     for (let i = left; i <= right; i++) {
-        s = i.toString();
-        if (s.includes('0')) {
+        if (i.toString().includes('0')) {
             continue;
         } else {
-            for (let j = 0; j < s.length; j++) {
-                if (parseInt(s, 10) % parseInt(s[j], 0) != 0) {
+            
+            for (let j = 0; j < i.toString().length; j++) {
+                if (i % parseInt(i.toString()[j], 0) != 0) {
                     break;
-                } else if (j === s.length - 1 && (parseInt(s, 10) % parseInt(s[j],10)) === 0) {
-                 
-                    retArr.push(parseInt(s, 10));
+                } else if (j === i.toString().length - 1 && (i % parseInt(i.toString(),10)) === 0) {
+                    retArr.push(i);
                 }
             }
         }
