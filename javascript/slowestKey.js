@@ -23,8 +23,13 @@ var slowestKey = function(releaseTimes, keysPressed) {
     if (keys.length === 1) {
         return keys[0]
     } else {
-        keys.sort();
-        return keys.pop();
+        let high = keys[0];
+        for (let i = 0; i < keys.length; i++) {
+            if (keys[i] > high) {
+                high = keys[i]
+            }
+        }
+        return high
     }
 };
 
