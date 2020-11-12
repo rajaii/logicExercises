@@ -34,7 +34,7 @@ var frequencySort = function(nums) {
     for (let i = 0; i < nObjs.length; i++) {
         for (let key in nObjs[i]) {
             for (let j = 0; j < nObjs[i][key]; j++) {
-                sorted.push(parseInt(key, 10));
+                sorted.push(key);
             }
         }
     }
