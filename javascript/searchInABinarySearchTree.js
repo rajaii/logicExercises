@@ -10,24 +10,21 @@ var searchBST = function(root, val) {
     let visited = [];
     while (queue[0] != undefined) {
      if (!visited.includes(queue[0])) {
+         
          if (queue[0].val === val) {
-            subtree = queue[0];
-            break;
+             return queue[0];
          }
-        
-        
+         
          if (queue[0].left != null) { 
              if (queue[0].left.val === val) {
-            subtree = queue[0].left;
-            break;
+            return queue[0].left;
          } 
          queue.push(queue[0].left); 
          } 
         
          if (queue[0].right != null) {
             if (queue[0].right.val === val) {
-            subtree = queue[0].right;
-            break;
+                return queue[0].right;
          }    
          queue.push(queue[0].right);
          }
@@ -39,12 +36,7 @@ var searchBST = function(root, val) {
      }    
     }
     
-    //return null || val
-    if (subtree === undefined) {
-        return null;
-    } else {
-        return subtree;
-    }
+    return null;
 };
 
 //Edge cases: null tree or root only in tree, 
