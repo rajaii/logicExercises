@@ -1,8 +1,6 @@
 //from leetcode easy: https://leetcode.com/problems/search-in-a-binary-search-tree/submissions/
 
 var searchBST = function(root, val) {
-    //set variable that will be returned
-    let subtree;
     
     //run BFT searching for val and setting subtree if val is found
     let queue = [];
