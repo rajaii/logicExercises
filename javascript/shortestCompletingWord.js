@@ -5,7 +5,7 @@ var shortestCompletingWord = function(licensePlate, w) {
     let lp = licensePlate.toLowerCase();
     let count = {};
     let completing = [];
-    let shortest = [];
+    
     
     //take out all non-letters from l
     const l = lp.replace(/[^a-z]/g, '');
@@ -37,12 +37,18 @@ var shortestCompletingWord = function(licensePlate, w) {
             }
             
         }
-        let p = false;
-        for (let key in tempObj) {
-          if (count[key] > tempObj[key]) {
+        let p = true;
+
+        for (let key in count) {
+          if (tempObj[key] === undefined) {
+              p = false;
+              break;
+          }  
+          else if (count[key] > tempObj[key]) {
+              p = false;
               break;
           }  else {
-             p = true; 
+             continue 
           }
         }
         if (p === true) {
@@ -51,23 +57,37 @@ var shortestCompletingWord = function(licensePlate, w) {
         tempObj = {};
         
     }
-    console.log(completing);
-    //find shortest length that occurs first in w and return
-    let c = completing.map(w => [w, w.length]);
-    if (c.length === 1) {
-        return c[0][0];
-    } else {
-        c.sort((a,b) => {
-            if (a[1].length === b[1].length) {
-                return w.indexOf(a[1].length) - w.indexOf(b[1].length)
+       
+        completing.sort((a,b) => {
+            if (a.length === b.length) {
+                return w.indexOf(a.length) - w.indexOf(b.length)
             } else {
-            return a[1].length - b[1].length
+            return a.length - b.length
             }
         })
-        return c[0][0]
-    }
+        return completing[0]
+    
     
 };
+
+//edge cases:
+//?'s:
+
+//pseudo:
+
+//run and save in memory lp = licensePlate.toLowerCase() count = {} and completing = [] and shortest = []
+
+//l = string.replace() on lp and take out all the letters ie remove non letters
+
+//loop l and make an object of the form comp = {l[i]: count}
+
+//loop each word in words and compare to see if it has all the letters in comp and at least the count amt
+
+//if it does push it into completing
+
+//find the word/words with the shortest length in completing and push those into shortest 
+
+//if length of shortest === 1 return shortest[0] else find which is first in words and return that
 
 //edge cases:
 //?'s:
