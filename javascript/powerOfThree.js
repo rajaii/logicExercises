@@ -12,7 +12,7 @@ var isPowerOfThree = function(n) {
        
    let answer = 1;
    //loop to n multiplying 3 by three on each iteration
-   for (let i = 0; i < n; i++) {
+   for (let i = 0; i < (n/2); i++) {
        if (answer === n) {
            return true;
        } else if (answer > n) {
