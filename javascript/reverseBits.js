@@ -5,12 +5,8 @@ var reverseBits = function(n) {
     let s = n.toString(2).padStart(32, 0)
     let arr = s.split('');
     
-    //loop to half and swap arr[i] with arr[s.length - i - 1]
-    for (let i = 0; arr.length % 2 === 0 ? i < arr.length / 2 : i < (arr.length / 2) - (arr.length / 2 % 1); i++) {
-        let temp = arr[arr.length - 1 - i];
-        arr[arr.length - 1 - i] = arr[i];
-        arr[i] = temp;   
-    }
+    //use reverse to reverse array
+    arr.reverse();
     
     return parseInt(arr.join(''),2);
 };
