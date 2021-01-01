@@ -15,7 +15,7 @@ var checkPerfectNumber = function(n) {
             divisors.push(i);
         }
     }
-     console.log(divisors)
+    
     //return true if dvisors add to n or false
     if (divisors.reduce((a,c) => a + c, 0) === n) {
         return true;
