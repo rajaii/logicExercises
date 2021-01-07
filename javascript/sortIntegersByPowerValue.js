@@ -10,7 +10,7 @@ var getKth = function(lo, hi, k) {
         let num = i;
         while (num > 1) {
             if (num % 2 === 0) {
-            num = num / 2;
+            num = num >> 1;
             power += 1;
             } else {
             num = 3 * num + 1;
@@ -21,15 +21,13 @@ var getKth = function(lo, hi, k) {
     }
     
     //sort powers
-    powers.sort((a,b) => {
+    return powers.sort((a,b) => {
     if (a[1] === b[1]) {
       return a[0] - b[0]; 
     } else {
         return a[1] - b[1]; 
     }
-    });
-    
-    return powers[k-1][0];
+    })[k-1][0];
 };
 
 //edge cases: 
