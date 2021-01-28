@@ -42,4 +42,4 @@ var uniqueMorseRepresentations = function(words) {
 //return Object.keys(count).length;
 
 //refactor:
-//did not need object
+//did not need objec
