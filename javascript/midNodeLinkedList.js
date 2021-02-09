@@ -1,31 +1,24 @@
 //from leetcode easy: https://leetcode.com/problems/middle-of-the-linked-list
 
 var middleNode = function(head) {
-    //set the counter variables
-    let count = 0;
-    let counter;
+    //set the tracker array
+    let tracker = [];
+    let mid;
     
     //traverse list keeping track of count
     let cur = head;
     while (cur != null) {
-        count += 1;
+        tracker.push(cur);
         cur = cur.next;
     }
     
-    if (count % 2 === 0) {
-        counter = count / 2 + 1;
+    if (tracker.length % 2 === 0) {
+        mid = tracker.length / 2;
     } else {
-        counter = Math.ceil(count / 2);
+        mid = Math.floor(tracker.length / 2);
     }
-    //traverse list again count times and return the node when counter = 1
-    cur = head;
-    while (cur != null) {
-        if (counter === 1) {
-            return cur;
-        } 
-        counter -= 1;
-        cur = cur.next;
-    }
+    
+    return tracker[mid];
     
 };
 
@@ -38,3 +31,8 @@ var middleNode = function(head) {
 //set a mid var
 
 //traverse again count times and return that value
+
+//REFACTOR:
+//traverse linked list pushing nodes in an array
+//define mid based off of array.length
+//return array[mid of array]
