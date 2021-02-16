@@ -3,12 +3,10 @@
 var maximum69Number  = function(num) {
     const n = num.toString().split('');
     
-    //loop n and change the first 6 to a 9
-    for (let i = 0; i < n.length; i++) {
-        if (n[i] === '6') {
-            n[i] = '9';
-            break;
-        }
+    //find index of first 6 and swap with 9
+    let i = n.indexOf('6');
+    if (i != -1) {
+        n[i] = '9'
     }
     
     return parseInt(n.join(''), 10);
