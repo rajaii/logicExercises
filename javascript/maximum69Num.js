@@ -20,4 +20,3 @@ var maximum69Number  = function(num) {
 
 //return n.join('');
 
-//https://leetcode.com/problems/angle-between-hands-of-a-clock/
