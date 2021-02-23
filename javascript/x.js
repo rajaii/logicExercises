@@ -1,7 +1,4 @@
-let s = 'used'
+let s = '0010601'
 
-let k = s;
 
-s += '2';
-
-console.log(k)
+console.log(parseInt(s, 2))
