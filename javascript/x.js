@@ -1,4 +1,5 @@
-let s = '0010601'
+let s = ['0','0','1','0']
 
 
-console.log(parseInt(s, 2))
+
+console.log(s.findIndex((x) => x != '4'))
