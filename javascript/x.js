@@ -1,5 +1,7 @@
-let s = ['0','0','1','0']
+let s = "--17-5 229 35-39475 "
 
 
 
-console.log(s.findIndex((x) => x != '4'))
+let x = s.split('-')
+
+console.log(x.split(' '))
