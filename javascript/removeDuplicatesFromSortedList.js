@@ -37,6 +37,40 @@ var deleteDuplicates = function(head) {
 
 };
 
+//REFACTOR
+//in place:
+//traverse list 
+//let prev = cur;
+//while (cur.next.val === cur.val)
+//cur.next = cur.next.next
+
+//outside of while 
+//cur = cur.next
+
+var deleteDuplicatesInPlace = function(head) {
+    //handle edge cases:
+    if (head === null || head.next === null) {
+        return head;
+    }
+    
+    //traverse linked list setting nexts in place to be ones not === in val
+    let cur = head;
+    while (cur !== null) {
+        if (cur.next != null && cur.next.next === null && cur.next.val === cur.val) {
+            cur.next = null;
+            break;
+        }
+       while (cur.next != null && cur.next.val === cur.val) {
+           cur.next = cur.next.next;
+       }
+        cur = cur.next;
+    }
+
+    
+    return head;
+
+};
+
 //edge cases: null list empty list, 
 //?'s': 
 
