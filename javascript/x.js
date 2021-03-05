@@ -1,7 +1,7 @@
-let s = "--17-5 229 35-39475 "
+let regex = /[snrt]/
+let s = "20th"
 
 
 
-let x = s.split('-')
 
-console.log(x.split(' '))
+console.log(s.split(regex))
