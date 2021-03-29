@@ -1,9 +1,9 @@
-let regex = /[snrt]/
-let s = "20th"
+const s = '+'
+console.log(parseInt(s))
 
 
 
 
-console.log(s.split(regex))
+
 
 //  https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/
