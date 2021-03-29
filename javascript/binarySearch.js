@@ -8,6 +8,11 @@
 //     return nums.indexOf(target);
 // };
 
+// var search = function(nums, target) {
+//     //loop nums to check if target is in there
+//     return nums.indexOf(target);
+// };
+
 //did above in less than a min using build in fncs, will now try to do without them
 //edge cases: 1 num in nums, 
 //?'s: limits on time/space?
