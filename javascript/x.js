@@ -1,5 +1,5 @@
-const s = '+'
-console.log(parseInt(s))
+const s = 10
+console.log(s.toString(2))
 
 
 
