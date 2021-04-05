@@ -25,16 +25,43 @@
 
 //outside of loop return -1
 
+// var search = function(nums, target) {
+//     //loop nums to check if target is in there
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === target) {
+//             return i;
+//         }
+//     }
+    
+//     return -1
+// };
+
+//REFACTOR to actually use binary search:
+
 var search = function(nums, target) {
     //loop nums to check if target is in there
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === target) {
-            return i;
-        }
+    let left = 0;
+    let right = nums.length - 1;
+    let pivot = Math.floor((left + right) / 2);
+    
+    if (!nums.includes(target)) {
+        return -1;
     }
     
-    return -1
+    while (nums[pivot] !== target) {
+    if (target > nums[pivot]) {
+        left = pivot + 1;
+        pivot = Math.floor((left + right) / 2)
+    } else {
+        right = pivot - 1;
+        pivot = Math.floor((left + right) / 2)
+    }
+    }
+           
+    return pivot;
+    
 };
+
 
 
 
