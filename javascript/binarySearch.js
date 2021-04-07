@@ -64,7 +64,6 @@
 
 
 var search = function(nums, target) {
-    //loop nums to check if target is in there
     let left = 0;
     let right = nums.length - 1;
     
