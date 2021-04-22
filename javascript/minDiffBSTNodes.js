@@ -50,3 +50,46 @@ var minDiffInBST = function(root) {
 //traverse the tree bft
 //push each val into a vals array
 //double loop vals running subtraction keeping smallest positive diff
+
+//refactor to improve runtime
+//sort array.
+
+//loop and keep popping and subtracting from array[.length - 1] and track min as it //progresses
+
+
+var minDiffInBST = function(root) {
+    let min = Infinity;
+    
+    //  traverse the tree checking and setting min as it progresses
+    const queue = [];
+    const visited = [];
+    const vals = [];
+    queue.push(root);
+     while (queue.length > 0) {
+        if (!visited.includes(queue[0]) && queue[0] !== null) {
+            queue.push(queue[0].left);
+            queue.push(queue[0].right);
+            vals.push(queue[0].val);
+            visited.push(queue.shift());
+        } else {
+            queue.shift();
+        }
+     } 
+    
+    //  sort vals
+    vals.sort((a,b) => a - b);
+    
+    //  loop vals popping and minusing the pop from the new last element; track min
+    while (vals.length > 0) {
+        if (vals[vals.length - 1] - vals[vals.length - 2] < min) {
+            min = vals[vals.length - 1] - vals[vals.length - 2];
+            vals.pop();
+        } else {
+            vals.pop()
+        }
+    }
+    
+    
+    
+    return min;
+};
