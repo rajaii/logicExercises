@@ -1,6 +1,6 @@
 
 
 
-//  PR and merge binary gap, refactor and do the medium after next
+const a = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]];
 
-console.log(2000 * 222222222222222200 + 35111111111111107000)
+console.log(a[0].concat(a[1]))
