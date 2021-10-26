@@ -38,3 +38,25 @@ var findMaxAverage = function(nums, k) {
 //if so reset max
 
 //return max
+
+//  Round 2 refactor post education:
+
+var findMaxAverage = function(nums, k) {
+    //find inital max val
+    let sum = 0;
+    for (let i = 0; i < k; i++) {
+        sum += nums[i];
+    }
+    
+    //set an array with the first sum
+    const sums = [sum]
+    
+    //loop nums adding nums[i+k] to sum and subtracting nums[i] from sum and pushing result into sums
+    for (let i = 0; i < (nums.length - k); i++) {
+        sum += nums[i + k];
+        sum -= nums[i]
+        sums.push(sum);
+    }
+    
+    return Math.max(...sums) / k;
+};
