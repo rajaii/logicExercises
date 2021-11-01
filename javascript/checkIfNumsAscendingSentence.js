@@ -41,3 +41,27 @@ var areNumbersAscending = function(s) {
 //}
 
 //return true
+
+//refactor after study:
+
+var areNumbersAscending = function(s) {
+    //split s into an array and set emtpy nums
+    const a = s.split(' ');
+    const nums = [];
+    
+    //loop a and transform each item to number
+    for (let i = 0; i < a.length; i++) {
+        a[i] = ++a[i];
+    }
+    
+    const newA = a.filter(Boolean)
+    
+    //loop newA and return false if not in order
+    for (let i = 0; i < newA.length; i++) {
+        if (newA[i] >= newA[i+1]) {
+            return false;
+        }
+    }
+    
+    return true;
+};
