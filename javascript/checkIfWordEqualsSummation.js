@@ -36,3 +36,11 @@ var isSumEqual = function(firstWord, secondWord, targetWord) {
     
     return false;
 };
+
+//refactor after study:
+
+var isSumEqual = function(firstWord, secondWord, targetWord) {
+    const wordToInt = word => parseInt([...word].reduce((a,c) => a + (c.charCodeAt(0) - "a".charCodeAt(0)), ""))
+    
+    return wordToInt(firstWord) + wordToInt(secondWord) === wordToInt(targetWord)
+};
