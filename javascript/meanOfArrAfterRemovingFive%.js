@@ -25,3 +25,20 @@ var trimMean = function(arr) {
 //find the smallest and largest 5% based off of index
 
 //reduce on the slice of arr without the top and bottom 5%
+
+//Refactor after study:
+
+var trimMean = function(arr) {
+    arr.sort((a,b) => a - b);
+    
+    //find out the smallest and largest 5%
+    const topBot = arr.length * .05;
+    
+    //push smallest and largest 5% into avgArr
+    for (let i = 0; i < topBot; i++) {
+        arr.pop();
+        arr.shift();
+    }
+    
+    return arr.reduce((a,c) => a+c , 0) / arr.length;
+};
