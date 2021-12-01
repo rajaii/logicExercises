@@ -29,3 +29,47 @@ var intersect = function(nums1, nums2) {
 //if shorter.includes(longer[i]) => push into retArr remove from short
 //return retArr
 
+//refactor after study
+
+var intersect = function(nums1, nums2) {
+    //set retArr and shorter/longer 
+    const retArr = [];
+    
+    const m = new Map();
+    //make a map of long and then check using get 
+    for (let i = 0; i < nums1.length; i++) {
+        m.set(nums1[i], m.get(nums1[i]) + 1 || 1);
+    }
+   
+    for (let i = 0; i < nums2.length; i++) {
+        if (m.get(nums2[i]) > 0) {
+            retArr.push(nums2[i])
+            m.set(nums2[i], m.get(nums2[i]) -1)
+        }
+    }
+    
+    return retArr;
+};
+
+//or with object
+
+var intersect = function(nums1, nums2) {
+    //set retArr and shorter/longer 
+    const retArr = [];
+    
+    const o = {};
+    //make a map of long and then check using get 
+    for (let i = 0; i < nums1.length; i++) {
+        o[nums1[i]] = o[nums1[i]] + 1 || 1;
+    }
+ 
+    for (let i = 0; i < nums2.length; i++) {
+        if (o[nums2[i]] > 0) {
+            retArr.push(nums2[i]);
+            o[nums2[i]] -= 1;
+        }
+    }
+   
+    
+    return retArr;
+};
