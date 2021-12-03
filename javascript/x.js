@@ -1,4 +1,8 @@
-//https://leetcode.com/problems/h-index-ii/
+let m = new Set()
+m.add([2])
+m.add([3])
 
-console.log(" ".split(" ")[0]);
 
+for (let item of m) {
+    console.log(typeof item);
+}
