@@ -28,3 +28,14 @@ var reversePrefix = function(word, ch) {
 //i = w.indexOf(ch)
 //loop w up to i/2 swapping
 //return w.join("")
+
+//refactor after study
+
+var reversePrefix = function(word, ch) {
+    const i = word.indexOf(ch) + 1;
+    const fst = word.slice(0, i);
+    const scnd = word.slice(i);
+    
+    return fst.split("").reverse().join("") + scnd
+    
+};
