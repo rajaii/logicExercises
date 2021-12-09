@@ -5,3 +5,9 @@ var minPartitions = function(n) {
     const x = a.map(n => parseInt(n))
     return Math.max(...x)    
   };
+
+  //refactor after study
+
+  var minPartitions = function(n) {
+    return Math.max(...n)    
+  };
