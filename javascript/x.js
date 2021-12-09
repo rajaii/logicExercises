@@ -1,6 +1,5 @@
-const x = 0, y = 2, c = undefined;
-console.log(y, c);
+console.log(10000 + 11111 + 11111 + 10111 + 10101 + 10100 + 10100 + 10100)
+
+
 
 //https://leetcode.com/problems/push-dominoes
-
-//https://leetcode.com/problems/reverse-prefix-of-word/
