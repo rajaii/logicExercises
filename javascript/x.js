@@ -1,6 +1,5 @@
-const x = 0, y = 2, c = undefined;
-console.log(y, c);
+const s = 1
+console.log(s.toString().split(""))
+
 
 //https://leetcode.com/problems/push-dominoes
-
-//https://leetcode.com/problems/reverse-prefix-of-word/
