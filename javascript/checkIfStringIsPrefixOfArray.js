@@ -31,3 +31,25 @@ var isPrefixString = function(str, w) {
 //}
 
 //return false;
+
+
+//refactor 
+var isPrefixString = function(str, w) {
+    //set the string to concat to
+    let s = "";
+    
+    //loop words and concat w[i] to s and run checks
+    let i = 0;
+    while (s.length <= str.length) {
+        s += w[i];
+        if (s === str) {
+            return true;
+        }
+        if (s.length > str.length) {
+            return false;
+        }
+        i += 1;
+    }
+    
+    return false;
+};
