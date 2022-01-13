@@ -1,6 +1,9 @@
-const num = new Date("2022-01-04T18:15:23Z")
-const n = new Date("2022-01-04T18:15:24Z")
+//https://leetcode.com/problems/ones-and-zeroes/
 
-console.log(num - n)
+const one = 1;
+const two = 2;
+const three = 3;
+const x = parseInt(one.toString().concat(two.toString()).concat(three.toString()))
+console.log(x)
 
 
