@@ -15,6 +15,17 @@ var findNumbers = function(nums) {
     return evens;
 };
 
+//refactor using .reduce
+var findNumbers = function(nums) {
+    return nums.reduce((p, c, i) => {
+        if (nums[i].toString().length % 2 === 0) {
+            return p + 1;
+        } else {
+            return p;
+        }
+    }, 0)
+};
+
 //PSEUDO:
 //set evens = 0
 //loop nums
