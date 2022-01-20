@@ -40,3 +40,41 @@ var wateringPlants = function(p, capacity) {
 //}
 
 //return steps.reduce((a,c) => a+c, 0)
+
+//2 refactors
+var wateringPlants2 = function(p, capacity) {
+    let c = capacity; 
+    let i = 0;
+    let steps = 0;
+
+    p.forEach((pl, i) => {
+        steps += 1
+        c -= p[i];
+        if (c < p[i+1]) {
+            steps += (2 * (i + 1));
+            c = capacity;
+        } 
+    })
+    
+    return steps 
+};
+
+var wateringPlants3 = function(p, capacity) {
+    let c = capacity; 
+    let i = 0;
+    let steps = 0;
+
+    while (i < p.length) {
+        steps += 1;
+        c -= p[i]
+        if (c < p[i+1]) {
+            steps += (2 * (i + 1));
+            i += 1;
+            c = capacity;
+        } else {
+            i += 1;
+        }
+    }
+    
+    return steps; 
+};
