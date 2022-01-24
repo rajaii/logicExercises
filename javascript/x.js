@@ -1,9 +1,9 @@
 
 
-const a = [3,1,6,7]
-a.sort((a, b) => b - a)
-console.log(a)
+let j = 2;
+let i = 1;
+let condition = j <= 1 
+console.log(condition);
 
 
-//difficult do in 2 weeks around feb 4th
-////https://leetcode.com/problems/number-of-visible-people-in-a-queue/
+
