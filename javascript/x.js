@@ -2,7 +2,9 @@
 
 //or
 
-//https://leetcode.com/problems/contains-duplicate-iii/
+//https://leetcode.com/problems/contains-duplicate-ii/
+
+
 
 let j = 2;
 let i = 1;
