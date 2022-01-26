@@ -1,8 +1,4 @@
-//https://leetcode.com/problems/minimum-number-of-people-to-teach/
-
-//or
-
-//https://leetcode.com/problems/contains-duplicate-ii/
+//
 
 
 
