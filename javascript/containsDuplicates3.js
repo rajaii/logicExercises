@@ -39,3 +39,21 @@ var containsNearbyAlmostDuplicate = function(nums, k, t) {
 //}
 
 //return false;
+
+//refactor
+
+var containsNearbyAlmostDuplicate2 = function(nums, k, t) {
+    //set array to hold indices that pass the test
+    const indices = [];
+    
+    //double loop nums and check if the indices meet the guidelines
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (Math.abs(nums[i] - nums[j]) <= t && Math.abs(i - j) <= k) {
+                return true;
+            }
+        }
+    }
+    return false;
+    
+};
