@@ -42,3 +42,20 @@ var capitalizeTitle = function(t) {
 //set retStr
 //loop map and join
 //return joinedMap.join(" ");
+
+var capitalizeTitle2 = function(t) {
+    //split titile and map it to split the inner strings
+    const s = t.split(" ");
+    
+    //loop map and change accordingly
+    for (let i = 0; i < s.length; i++) {
+        if (s[i].length < 3) {
+            s[i] = s[i].toLowerCase();
+        } else {
+            s[i] = s[i][0].toUpperCase().concat(s[i].slice(1).toLowerCase())
+        }
+    }
+    
+    return s.join(" ");
+    
+};
