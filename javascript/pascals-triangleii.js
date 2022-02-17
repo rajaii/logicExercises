@@ -29,3 +29,11 @@ var getRow = function(rowIndex) {
     
     return generatePascalAndPullRow(rowIndex);
 };
+
+//PSEUDO: 
+
+
+//make a function generatePascal that generates 2d array up to row
+//return the last array in there
+
+//return a call of generatePascal
