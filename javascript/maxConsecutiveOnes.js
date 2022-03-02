@@ -21,7 +21,6 @@ var findMaxConsecutiveOnes = function(n) {
             counter = 0;
         }
     }
-   
 
     return Math.max(...counts);
 };
