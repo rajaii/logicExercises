@@ -1,10 +1,10 @@
-let n = 20
-console.log(n.toString())
+let n = []
+console.log(Math.max(...n))
 
 
 
 
-
+//start fresh easy 70-80% and check ^
 
 
 
