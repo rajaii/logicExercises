@@ -62,3 +62,34 @@ var findLucky = function(a) {
 
 //out of loops
 //return Math.max(...luckys)
+
+
+//refactor after study:
+//make hash table of the form {n[i]: count}
+//filter the ones where the property === the value into an array
+//return max of that array
+
+
+var findLucky = function(a) {
+    let obj = {};
+    let luckies = [];
+    
+    //make object of the form {n[i]: count}
+    for (let i = 0; i < a.length; i++) {
+        if (obj[a[i]] === undefined) {
+            obj[a[i]] = 1;
+        } else {
+            obj[a[i]] += 1;
+        }
+    }
+    
+    //filter the object for ones where key === value
+    for (let key in obj) {
+        if (parseInt(key) === obj[key]) {
+            luckies.push(obj[key]);
+        }
+    }
+    
+    return luckies.length === 0 ? -1 : Math.max(...luckies);
+    
+}
