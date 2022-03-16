@@ -1,11 +1,9 @@
-let n = []
-console.log(Math.max(...n))
 
 
+const x = 'w'
+console.log(isNaN(parseInt(x)))
 
-
-//got over findLuckInt
-//do another from its success list
+//easy
 
 
 
