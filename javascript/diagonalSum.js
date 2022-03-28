@@ -54,3 +54,30 @@ var diagonalSum = function(m) {
 
 
 //return toSum.reduce((a,c) => a+c, 0)
+
+//refactor
+var diagonalSum = function(m) {
+    //set the return array
+    let sum = 0;
+    let mid;
+    let j = 0;
+    let k = m.length - 1;
+    if (m.length % 2 !== 0) {
+        even = false;
+        mid = Math.floor(m.length / 2);
+    }
+    //loop twice tagging the ones to push into the array we will reduce and return
+    for (let i = 0; i < m.length; i++) {
+        sum += m[i][i];
+        if (j === mid && !even) {
+            j++;
+            k--;
+            continue;
+        }
+        sum += m[k][j];
+        k--;
+        j++;    
+    }
+    
+    return sum;
+};
