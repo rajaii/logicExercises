@@ -93,3 +93,62 @@ var reorderSpaces = function(t) {
 //i += counter;
 //}
 //}
+
+//v2 after study
+var reorderSpaces = function(t) {
+    //set the memory
+    let spaceCounter = 0;
+    let wordCounter = 0;
+    let retStr = "";
+    
+    //count words and spaces
+    for (let i = 0; i < t.length; i++) {
+        if (t[i] === " ") {
+            spaceCounter += 1;
+        }
+    }
+    
+   for (let i = 0; i < t.length; i++) {
+        if (t[i] !== " " && t[i + 1] === " ") {
+        wordCounter += 1;
+        } else if (t[i] !== " " && i === t.length - 1) {
+        wordCounter += 1;
+        }
+    }
+    
+    //split t (newT) into a string of just words and single spaces
+    let transform = t.split(" ");
+    
+    const newT = transform.filter(t => t !== "").join(" ");
+    
+    //set spaces and padding
+    const spaces = wordCounter - 1;
+    let extraPadding = spaceCounter % spaces; 
+    const spacesBetween = Math.floor(spaceCounter / spaces);    
+    
+    if (wordCounter === 1) {
+        extraPadding = spaceCounter;
+    }
+    
+    //loop newT and concatenate with retStr until the length === t
+    let i = 0;
+    while (retStr.length <  t.length) {
+        let counter = spacesBetween;
+        if (newT[i] === " ") {
+            for (let j = 0; j < counter; j++) {
+            retStr += " ";
+            }
+            i += 1;
+        } else if (i === newT.length - 1) {
+            retStr += newT[i];
+            for (let j = 0; j < extraPadding; j++) {
+                retStr += " ";
+            }
+        } else {
+            retStr += newT[i];
+            i += 1;
+        }
+    }
+    
+    return retStr;
+};
