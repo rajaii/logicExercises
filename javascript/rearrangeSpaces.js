@@ -1,9 +1,4 @@
-//choose an easy monday, then:
-
-//==> refactor/study on these and pick new one from the next list of them:
-//https://leetcode.com/problems/find-all-k-distant-indices-in-an-array
-//https://leetcode.com/problems/print-words-vertically/
-
+//  from leetcode easy: https://leetcode.com/problems/rearrange-spaces-between-words
 
 var reorderSpaces = function(t) {
     //set the memory
@@ -27,8 +22,6 @@ var reorderSpaces = function(t) {
         }
     }
     
-    console.log("spaceCounter: ", spaceCounter)
-    console.log("wordCounter: ", wordCounter)
     //split t (newT) into a string of just words and single spaces
     const tToTransform = t.trim();
     for (let i = 0; i < tToTransform.length; i++) {
@@ -38,32 +31,33 @@ var reorderSpaces = function(t) {
           newT += tToTransform[i];
         } 
     }
-    console.log(newT)
     
     //set spaces and padding
-    const extraPadding = spaceCounter % wordCounter; 
-    const spaces = Math.floor(spaceCounter / wordCounter);
+    const spaces = wordCounter - 1;
+    let extraPadding = spaceCounter % spaces; 
+    const spacesBetween = Math.floor(spaceCounter / spaces);    
     
-    //HERE loop down continue
-    const spacesBetween = wordCounter - 1;
-    
+    if (wordCounter === 1) {
+        extraPadding = spaceCounter;
+    }
     
     //loop newT and concatenate with retStr until the length === t
     let i = 0;
     while (retStr.length <  t.length) {
-        let counter = spaces;
-        if (newT[i] !== " ") {
-            retStr += t[i];
+        let counter = spacesBetween;
+        if (newT[i] === " ") {
+            for (let j = 0; j < counter; j++) {
+            retStr += " ";
+            }
             i += 1;
-        } else if (i === newT.length) {
+        } else if (i === newT.length - 1) {
+            retStr += newT[i];
             for (let j = 0; j < extraPadding; j++) {
                 retStr += " ";
             }
         } else {
-        for (let j = 0; j < counter; j++) {
-            retStr += " ";
-        }
-        i += 1;
+            retStr += newT[i];
+            i += 1;
         }
     }
     
