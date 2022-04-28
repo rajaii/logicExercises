@@ -1,8 +1,8 @@
 
 //==> 
-//study refactor https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game
-// try https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ in o (n) o(1 space)
-//then move to meds from ^
+//https://leetcode.com/problems/find-all-duplicates-in-an-array/ and/or meds from V
+// try https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 
-console.log(1 % 2)
+
+
 
