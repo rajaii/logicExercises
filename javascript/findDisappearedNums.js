@@ -20,7 +20,7 @@ var findDisappearedNumbers = function(nums) {
 //disappeared.push(nums[i])
 //}
 
-//refactor to o(n) constant space as instrucitons
+//refactor to o(n) 
 var findDisappearedNumbers = function(nums) {
     //set the memory needed
     const disappeared = [];

@@ -1,8 +1,14 @@
 
 //==> 
-//study refactor https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game
-// try https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ in o (n) o(1 space)
-//then move to meds from ^
+//easy
 
-console.log(1 % 2)
+
+  //meds from V and study V
+// try https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+//https://leetcode.com/problems/find-all-duplicates-in-an-array/
+const test = { "autopay_exclude": true, "autopay_exclusion_reason": "ali", "isKOOL": true, "otherprop": "last one"}
+
+const { autopay_exclude, autopay_exclusion_reason, ...any } = test;
+
+console.log(any)
 
