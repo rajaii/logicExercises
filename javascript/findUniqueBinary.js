@@ -53,3 +53,25 @@ var findDifferentBinaryString = function(n) {
   } 
   
 };
+
+//refactor to o(n) using Set more efficient
+var findDifferentBinaryString = function(n) {
+  const list = [];
+  let nSet = new Set();
+  
+  //make an object of the form n[i]: n[i];
+  for (let i = 0; i < n.length; i++) {
+      if (!nSet.has(n[i])) {
+          nSet.add(n[i])
+      }
+  }
+  
+  const len = 2 ** n.length - 1;
+  
+  for (let i = 0; i < len + 1; i++) {
+      if (!nSet.has(i.toString(2).padStart(n.length, "0"))) {
+          return i.toString(2).padStart(n.length, "0");
+      }
+  } 
+  
+};
