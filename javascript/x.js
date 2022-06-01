@@ -6,7 +6,9 @@
 
 
 
+const s = "asdf"
 
+console.log(s.slice(-4, -1))
 
 
 
