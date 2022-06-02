@@ -1,19 +1,15 @@
 //meds from:
-
-  //study V and refactor and then pick meds from it
-  
+  //https://leetcode.com/problems/find-the-middle-index-in-array
   //https://leetcode.com/problems/find-pivot-index
 
 
 
-const s = "asdf"
-
-console.log(s.slice(-4, -1))
 
 
 
 
 
+//on: https://leetcode.com/problems/number-of-ways-to-split-array
 
 
 
