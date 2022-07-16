@@ -11,8 +11,9 @@ var largestGoodInteger = function(n) {
       if (n[i] === n[i+1] && n[i] === n[i+2]) {
           goods.push(n.slice(i, i+3));
       }
+      
   }
-  
+
   
   if (goods.length === 0) return "";
   let max = Math.max(...goods).toString();
