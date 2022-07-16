@@ -13,6 +13,7 @@ var largestGoodInteger = function(n) {
       }
   }
   
+  
   if (goods.length === 0) return "";
   let max = Math.max(...goods).toString();
   if (parseInt(max) === 0) return "000";
