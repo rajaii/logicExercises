@@ -25,6 +25,7 @@ var largestGoodInteger = function(n) {
   }
 };
 
+
 //PSEUDO:
 //const goods = [];
 //loop n to n.length - 3
