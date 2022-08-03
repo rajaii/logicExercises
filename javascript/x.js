@@ -9,5 +9,5 @@
 
 
 
-Math.random().toString().slice(0,2);
-console.log(Math.random().toString().slice(1,4));
+const x = parseInt(`${Date.now()}${`${Math.random()}`.slice(-6)}`, 10)
+console.log(x);
