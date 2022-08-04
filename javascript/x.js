@@ -1,13 +1,4 @@
-//meds from:
-  //https://leetcode.com/problems/find-pivot-index
-  //https://leetcode.com/problems/number-of-ways-to-split-array
-  //https://leetcode.com/problems/complement-of-base-10-integer
 
-//====> easy then ^
-//https://leetcode.com/problems/reorder-data-in-log-files/
+//https://leetcode.com/problems/day-of-the-week
 
 
-
-
-const x = parseInt(`${Date.now()}${`${Math.random()}`.slice(-6)}`, 10)
-console.log(x);
