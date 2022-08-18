@@ -1,5 +1,5 @@
-//easy
-//https://leetcode.com/problems/repeated-substring-pattern/
+//med
+//https://leetcode.com/problems/repeated-string-match/
 
 //med
 //https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/
