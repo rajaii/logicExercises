@@ -4,12 +4,11 @@
 //https://leetcode.com/problems/camelcase-matching/
 
 //hadr: https://leetcode.com/problems/parse-lisp-expression/
+//===>
+//refactor and any above or ones from this:
+//https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character
 
-//======>
-//https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/
-
-const x = [1,2,3]
-delete x[0];
+const x = new Date().toISOString();
 
 
 console.log(x)
