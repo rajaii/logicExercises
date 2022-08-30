@@ -3,10 +3,14 @@
 
 //https://leetcode.com/problems/camelcase-matching/
 
+//https://leetcode.com/problems/fizz-buzz-multithreaded/
+
 //hadr: https://leetcode.com/problems/parse-lisp-expression/
-//===>
-//refactor and any above or ones from this:
-//https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character
+
+//https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned/
+
+//==>
+//https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/
 
 const x = new Date().toISOString();
 
