@@ -5,10 +5,9 @@
 
 //meds from https://leetcode.com/problems/min-max-game
 
-const first = 1, second = 2;
-
-second = 3;
+const a = [1,2,3]
 
 
+delete a[1]
 
-console.log(second)
+console.log(a)
