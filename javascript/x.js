@@ -1,13 +1,38 @@
 
 
-//==> easy or:
+//==> med from:
 //https://leetcode.com/problems/k-closest-points-to-origin/
 
-//meds from https://leetcode.com/problems/min-max-game
+//==>
+//https://leetcode.com/problems/find-triangular-sum-of-an-array/
 
-const a = [1,2,3]
 
 
-delete a[1]
+// function getStateName(abbrv) {
+//   if (abbrv === "TX") {
+//       displayResult("Texas");
+//   } else if (abbrv === "CA") {
+//       displayResult("California");
+//   } else if (abbrv === "NY") {
+//       displayResult("New York");
+//   } 
+// }
 
-console.log(a)
+// const stateName = getStateName("ZZ");
+// console.log(stateName)
+
+
+
+
+
+
+
+
+
+
+
+
+
+const students = ["Kevin", "Andrew", "Ali", "Jenn",2,1,2,34,4,5];
+
+console.log(students.length);
