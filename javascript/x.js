@@ -27,12 +27,24 @@
 
 
 
+const dog = true;
+
+let a = { data: {
+  accounts: "1234"
+}}
+
+const { 
+  data: { accounts: ali }, 
+} = a;
+// if (dog) {
+//   const { 
+//     data: { accounts: ali }, 
+//   } = a; 
+// }  
+
+console.log(ali);
 
 
 
 
 
-
-const students = ["Kevin", "Andrew", "Ali", "Jenn",2,1,2,34,4,5];
-
-console.log(students.length);
