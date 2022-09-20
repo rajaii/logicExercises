@@ -58,3 +58,26 @@ var minimumRounds = function(tasks) {
 
 
 //return counter
+
+//refactor after study
+
+var minimumRounds = function(tasks) {
+  //loop and make object with counts
+  const counts = {};
+  for (let i = 0; i < tasks.length; i++) {
+      counts[tasks[i]] = counts[tasks[i]] + 1 || 1;
+  }
+  
+  let countVals = Object.values(counts);
+  
+  //loop Object.values(counts) and run logic to count
+  let counter = 0;
+  for (let i = 0; i < countVals.length; i++) {
+      if (countVals[i] < 2) {
+          return -1;
+      }
+      counter += Math.ceil(countVals[i] / 3)
+  }
+  
+  return counter;
+};
