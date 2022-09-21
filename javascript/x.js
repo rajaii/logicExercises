@@ -3,10 +3,10 @@
 //==> easy/meds fdrom
 //https://leetcode.com/problems/find-triangular-sum-of-an-array/
 //https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
-
-//==>
 //https://leetcode.com/problems/k-closest-points-to-origin/
 
+//==> follow up:
+//https://leetcode.com/problems/top-k-frequent-elements
 
 
 // function getStateName(abbrv) {
@@ -23,27 +23,6 @@
 // console.log(stateName)
 
 
-
-
-
-
-
-const dog = true;
-
-let a = { data: {
-  accounts: "1234"
-}}
-
-const { 
-  data: { accounts: ali }, 
-} = a;
-// if (dog) {
-//   const { 
-//     data: { accounts: ali }, 
-//   } = a; 
-// }  
-
-console.log(ali);
 
 
 
