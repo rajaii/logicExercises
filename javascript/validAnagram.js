@@ -79,3 +79,12 @@ var isAnagram = function(s, t) {
 //out of loop ret true
 
 //o(n) time o(n) space
+
+//more eloqquent but o (n log n)
+
+var isAnagram = function(s, t) {
+    s = s.split("").sort().join("");
+    t = t.split("").sort().join("");
+    
+    return ((s === t) && true);
+};
