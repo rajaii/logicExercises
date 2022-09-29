@@ -39,3 +39,43 @@ var isAnagram = function(s, t) {
 // else ret false
 //else ret false
 //ret true
+
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+    
+    //count the letters in an object
+    const sCounter = {};
+    const tCounter = {};
+    
+    for (let i = 0; i < s.length; i++) {
+        sCounter[s[i]] = sCounter[s[i]] + 1 || 1;
+    }
+    
+     for (let i = 0; i < t.length; i++) {
+        tCounter[t[i]] = tCounter[t[i]] + 1 || 1;
+    }
+    
+    //then loop the objecct for s and compare 
+    for (let key in sCounter) {
+        if (sCounter[key] != tCounter[key]) {
+            return false;
+        }
+    }
+    
+    
+    return true;
+    
+    
+};
+
+//PSEUDO:
+
+//count the letters in an object
+//then loop the objecct for s and compare 
+//if any count does not match or undefined => ret false
+
+//out of loop ret true
+
+//o(n) time o(n) space
