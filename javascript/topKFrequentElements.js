@@ -60,3 +60,42 @@ var topKFrequent = function(nums, k) {
 //sort counts by length desc
 
 //loop to k and push into ret counts[i]
+
+//refactor after study
+
+var topKFrequent = function(nums, k) {
+  //sort nums and set the memory needed
+  const bucket = [];
+  bucket.length = nums.length;
+  const counts = {};
+  const ret = [];
+  
+  for (let i = 0; i < nums.length; i++) {
+      counts[nums[i]] = counts[nums[i]] + 1 || 1;
+  }
+  
+  //loop nums and count in bucket
+  for (let key in counts) {
+      if (!bucket[counts[key]]) {
+          bucket[counts[key]] = [parseInt(key)];
+      } else {
+          bucket[counts[key]].push(parseInt(key));
+      }
+      
+  }
+      
+  //loop bucket backwards down k pushing bucket[i] into ret if defined 
+  let iter = 0;
+  for (let i = bucket.length - 1; i >= 0; i--) {
+      if (iter === k) {
+          break;
+      }
+      if (bucket[i]) {
+          ret.push(bucket[i]);
+          iter += bucket[i].length;
+      }
+  }
+         
+  return ret.flatMap(num => num);
+};
+
