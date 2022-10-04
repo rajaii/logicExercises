@@ -5,11 +5,16 @@
 //https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
 //https://leetcode.com/problems/k-closest-points-to-origin/
 
+const beginTime = Date.now()
 
-const names = [ 'Alice', 'alice' ]
-names.sort()
+console.log("hi")
+console.log("hi")
+console.log("hi")
+console.log("hi")
+console.log("hi")
 
-console.log(names);
+const endTime = Date.now()
+console.log(beginTime - endTime);
 
 
 
