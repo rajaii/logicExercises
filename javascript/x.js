@@ -1,20 +1,11 @@
 
 
-//==> easy/meds fdrom
-//https://leetcode.com/problems/find-triangular-sum-of-an-array/
-//https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
-//https://leetcode.com/problems/k-closest-points-to-origin/
+//==> refactor and study on 
+//https://leetcode.com/problems/product-of-array-except-self
 
-const beginTime = Date.now()
+const x = 2.23423453
 
-console.log("hi")
-console.log("hi")
-console.log("hi")
-console.log("hi")
-console.log("hi")
-
-const endTime = Date.now()
-console.log(beginTime - endTime);
+console.log(x.toFixed(2));
 
 
 
