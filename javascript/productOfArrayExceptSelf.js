@@ -49,3 +49,23 @@ var productExceptSelf = function(nums) {
 //loop nums and push into ret productForwards[i] * productBackwards[i]
 
 //return ret;
+
+//refactor after study
+var productExceptSelf = function(nums) {
+  //  make prefix and postfix
+  const ret = [];
+  ret[0] = 1;
+  let cur = 1;
+  for (let i = 0; i < nums.length; i++) {
+      ret[i] = cur;
+       cur *= nums[i];
+  }
+  
+  cur = 1;
+  for (let i = ret.length - 1; i >= 0; i--) {
+      ret[i] *= cur;
+      cur *= nums[i];
+  }
+   
+  return ret;
+};
