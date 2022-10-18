@@ -41,3 +41,7 @@ var isPalindrome = function(str) {
 //if s1 === s2 return true
 
 //else ret false
+
+let s = "123123"
+
+console.log(s.split(","))
