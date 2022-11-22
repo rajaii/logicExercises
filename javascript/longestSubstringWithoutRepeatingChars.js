@@ -1,42 +1,38 @@
 //  from leetcode medium: https://leetcode.com/problems/longest-substring-without-repeating-characters
 
-var lengthOfLongestSubstring = function(s) {
-  if (s.length === 0) {
-      return 0;
-  }
-  
-  if (s.length === 1 || s.split("").every(i => i === s[0])) {
-      return 1;
-  }
-  
+var lengthOfLongestSubstring = function(s) {    
   // set the memory needed
   let subs = "";
+  if (s.length >= 1) {
+      subs = `${s[0]}`;
+  }
+  let right = 1;
+  const S = new Set();
   
   //double loop and check if substring is longer than the one held in memory
   for (let left = 0; left < s.length; left++) {
-      const S = new Set();
-      S.add(s[left]);
-      let temp = `${s[left]}`
-      
-      for (let right = left + 1; right < s.length; right++) {
-          if (!S.has(s[right])) {
-              S.add(s[right]);
-              temp = `${temp}${s[right]}`
-              if (right === s.length - 1 && temp.length > subs.length) {
-                  subs = temp;
-              }
-              continue;
-          } else {
-              if (temp.length > subs.length) {
-                  subs = temp;
-              }
-              break;
-          }
-      }
+    const S = new Set();
+    S.add(s[left]);
+    let temp = `${s[left]}`
+    
+    for (let right = left + 1; right < s.length; right++) {
+        if (!S.has(s[right])) {
+            S.add(s[right]);
+            temp = `${temp}${s[right]}`
+            if (right === s.length - 1 && temp.length > subs.length) {
+                subs = temp;
+            }
+            continue;
+        } else {
+            if (temp.length > subs.length) {
+                subs = temp;
+            }
+            break;
+        }
+    }
   }
 
   return subs.length;
-
 
 };
 
