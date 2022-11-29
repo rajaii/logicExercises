@@ -59,3 +59,64 @@ var characterReplacement = function(s, k) {
   
   return max;
 };
+
+//Refactor after study:
+
+var characterReplacement = function(s, k) {
+  if (k === 0) {
+      let max = 1;
+      let temp = 1;
+      for (let i = 1; i < s.length; i++) {
+          if (s[i] === s[i-1]) {
+              temp += 1;
+              if (temp > max) {
+                  max = temp;
+              }
+          } else {
+              if (temp > max) {
+                  max = temp;
+                  temp = 1
+              }
+          }
+      }
+      return max;
+  }
+  let counts = {};
+  let right = 0;
+  let maxLen = 0;
+  
+  for (let left = 0; left < s.length; left++) {
+      if (left > 0) {
+          let len = (right - left) + 1;
+          let max = Math.max(...Object.values(counts));
+          if (len - max > k) {
+              counts[s[left]] -= 1;
+              continue;
+          }
+      }
+      
+      counts[s[right]] = counts[s[right]] + 1 || 1;
+      
+      while (right < s.length) {
+          len = (right - left) + 1;
+          max = Math.max(...Object.values(counts));
+                         
+          if (len - max <= k) {
+              if (len > maxLen) {
+                  maxLen = len;
+              }
+              right++;
+              counts[s[right]] = counts[s[right]] + 1 || 1;
+          } else {
+              counts[s[left]] -= 1;
+              counts[s[right]] -= 1;
+              break;
+          }
+          
+      }
+      
+  }
+  
+  return maxLen;
+  
+};
