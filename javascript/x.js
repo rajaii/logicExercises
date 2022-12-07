@@ -27,6 +27,39 @@ console.log(undefined == 0);
 //https://leetcode.com/problems/longest-repeating-character-replacement/ Look at his code and try to do the o(n)(not o(n*26)) case
 
 
-const s = "1000"
-console.log(s.split(".")[0]);
+var MinStack = function() {
+  this.minStack = [];
+};
 
+/** 
+* @param {number} val
+* @return {void}
+*/
+MinStack.prototype.push = function(val) {
+  this.minStack.push(val);
+};
+
+/**
+* @return {void}
+*/
+MinStack.prototype.pop = function() {
+  
+};
+
+/**
+* @return {number}
+*/
+MinStack.prototype.top = function() {
+  
+};
+
+/**
+* @return {number}
+*/
+MinStack.prototype.getMin = function() {
+  
+};
+
+const a = new MinStack();
+a.push("x");
+console.log(a.minStack)
