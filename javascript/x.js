@@ -2,14 +2,14 @@
 
 
 
-//====> solve after study
-//https://leetcode.com/problems/permutation-in-string/
+//====> 
+//valid parenthesis stack
 const formatDate = (date) => {
   return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 };
 
-const n = new Date();
-console.log(formatDate(n));
+;
+console.log(undefined == 0);
 
 
 //next round neetcode

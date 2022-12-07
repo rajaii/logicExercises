@@ -55,4 +55,28 @@ var isValid = function(s) {
 
 
 
+var isValid = function(s) {
+  let openToClose = {
+      "{": "}",
+      "[": "]",
+      "(": ")",
+  }
 
+  const stack = [];
+  for (let i = 0; i < s.length; i++) {
+      if (s[i] === "{" || s[i] === "[" || s[i] === "(") {
+          stack.push(openToClose[s[i]]);
+      } else {
+          if (stack.pop() !== s[i]) {
+              return false;
+          }
+      }
+  }
+
+  if (stack.length === 0) {
+      return true;
+  }
+
+  return false;
+
+};
