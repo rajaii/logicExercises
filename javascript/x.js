@@ -2,15 +2,8 @@
 
 
 
-//====> 
-//valid parenthesis stack
-const formatDate = (date) => {
-  return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-};
-
-;
-console.log(undefined == 0);
-
+//====> watch video and try again
+//https://leetcode.com/problems/min-stack
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and took a number of tries on the brute force
@@ -26,6 +19,8 @@ console.log(undefined == 0);
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/
 //https://leetcode.com/problems/longest-repeating-character-replacement/ Look at his code and try to do the o(n)(not o(n*26)) case
 
+//Stack
+//https://leetcode.com/problems/min-stack
 
 var MinStack = function() {
   this.minStack = [];
@@ -63,3 +58,7 @@ MinStack.prototype.getMin = function() {
 const a = new MinStack();
 a.push("x");
 console.log(a.minStack)
+
+
+const xl = `${Date.now()}${`${Math.random()}`.slice(-6)}`
+console.log(xl)
