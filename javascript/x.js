@@ -2,11 +2,11 @@
 
 
 
-//====> watch video and try again
-//https://leetcode.com/problems/min-stack
+//====> watch video/refacotr then move on
+//https://leetcode.com/problems/generate-parentheses/
 
 //next round neetcode
-//==> redo and study on more ie. could not get optimized on own and took a number of tries on the brute force
+//==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
 //Arrays and hashing:
 //https://leetcode.com/problems/product-of-array-except-self
 //https://leetcode.com/problems/longest-consecutive-sequence/
@@ -21,6 +21,9 @@
 
 //Stack
 //https://leetcode.com/problems/min-stack
+//NOTE:  fall short a few times on ability to generate combos and permutations even on brute force so far optimizeds sln doesn't even look at that but should study this: second occurrence occured on this:
+  //https://leetcode.com/problems/generate-parentheses/
+
 
 var MinStack = function() {
   this.minStack = [];
