@@ -3,7 +3,7 @@
 
 
 //====> watch video/refacotr then move on
-//https://leetcode.com/problems/generate-parentheses/
+//https://leetcode.com/problems/daily-temperatures/
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -23,45 +23,12 @@
 //https://leetcode.com/problems/min-stack
 //NOTE:  fall short a few times on ability to generate combos and permutations even on brute force so far optimizeds sln doesn't even look at that but should study this: second occurrence occured on this:
   //https://leetcode.com/problems/generate-parentheses/
+//https://leetcode.com/problems/daily-temperatures/
 
 
-var MinStack = function() {
-  this.minStack = [];
-};
-
-/** 
-* @param {number} val
-* @return {void}
-*/
-MinStack.prototype.push = function(val) {
-  this.minStack.push(val);
-};
-
-/**
-* @return {void}
-*/
-MinStack.prototype.pop = function() {
-  
-};
-
-/**
-* @return {number}
-*/
-MinStack.prototype.top = function() {
-  
-};
-
-/**
-* @return {number}
-*/
-MinStack.prototype.getMin = function() {
-  
-};
-
-const a = new MinStack();
-a.push("x");
-console.log(a.minStack)
-
-
-const xl = `${Date.now()}${`${Math.random()}`.slice(-6)}`
-console.log(xl)
+const d = [1]
+d[5] = 3;
+console.log(d)
+for (let i = 0; i < d.length; i++) {
+  console.log(d[i]);
+}

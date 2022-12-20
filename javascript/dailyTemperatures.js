@@ -51,3 +51,36 @@ var dailyTemperatures = function(t) {
 return temperatures;
 
 };
+
+//refactor to o(n) runtime o(n) space using stack
+
+var dailyTemperatures = function(temperatures) {
+  //loop checking and push into stack if not > prev
+  const ret = [];
+  const stack = [[temperatures[0], 0]];
+  for (let i = 1; i < temperatures.length; i++) {
+      if (temperatures[i] <= stack[stack.length - 1][0]) {
+          stack.push([temperatures[i], i]);
+      } else {
+          while (stack[stack.length-1] && stack[stack.length-1][0] < temperatures[i]) {
+              ret[stack[stack.length-1][1]] = i - stack[stack.length-1][1];
+              stack.pop()
+          }
+          stack.push([temperatures[i],i])
+      }
+      
+  }
+  
+  for (let i = 0; i < ret.length; i++) {
+      if (ret[i] === undefined) {
+          ret[i] = 0;
+      }
+  }
+
+  while (ret.length < temperatures.length) {
+      ret.push(0);
+  }
+
+  return ret;
+
+};
