@@ -1,66 +1,41 @@
 //from leetcode: easy: https://leetcode.com/problems/binary-search/
 
-// var search = function(nums, target) {
-//     if (!nums.includes(target)) {
-//         return -1
-//     }
-    
-//     return nums.indexOf(target);
-// };
+var search = function(nums, target) {
+  if (nums.length === 1 && target === nums[0]) {
+      return 0;
+  }
+  
+  let mid= Math.floor(nums.length / 2);
+  let high = nums.length - 1;
+  let low = 0;
 
-// var search = function(nums, target) {
-//     //loop nums to check if target is in there
-//     return nums.indexOf(target);
-// };
+  while (low < high) {
+      if (target === nums[mid]) {
+          return mid;
+      }
+      if (low === high - 1) {
+          if (target !== nums[low] && target !== nums[high]) {
+              return - 1;
+          }
+          if (target === nums[low]) {
+              return low;
+          }
 
-//did above in less than a min using build in fncs, will now try to do without them
-//edge cases: 1 num in nums, 
-//?'s: limits on time/space?
+          if (target === nums[high]) {
+              return high;
+          }
+          
+      } 
+      if (target > nums[mid]) {
+          low = mid;
+      } else if (target < nums[mid]) {
+          high = mid;
+      }
+      mid = Math.floor((high + low) / 2);
+  }
 
-//PSEUDO:
-
-//loop nums
-//if nums[i] === target:
-//return i
-
-//outside of loop return -1
-
-// var search = function(nums, target) {
-//     //loop nums to check if target is in there
-//     for (let i = 0; i < nums.length; i++) {
-//         if (nums[i] === target) {
-//             return i;
-//         }
-//     }
-    
-//     return -1
-// };
-
-//REFACTOR to actually use binary search:
-
-// var search = function(nums, target) {
-//     //loop nums to check if target is in there
-//     let left = 0;
-//     let right = nums.length - 1;
-//     let pivot = Math.floor((left + right) / 2);
-    
-//     if (!nums.includes(target)) {
-//         return -1;
-//     }
-    
-//     while (nums[pivot] !== target) {
-//     if (target > nums[pivot]) {
-//         left = pivot + 1;
-//         pivot = Math.floor((left + right) / 2)
-//     } else {
-//         right = pivot - 1;
-//         pivot = Math.floor((left + right) / 2)
-//     }
-//     }
-           
-//     return pivot;
-    
-// };
+  return -1;
+};
 
 
 var search = function(nums, target) {
