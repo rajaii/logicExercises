@@ -37,26 +37,30 @@ var search = function(nums, target) {
   return -1;
 };
 
+//refactor after study:
 
 var search = function(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
     
- while (left <= right) {
-    let pivot = Math.floor((left + right) / 2);
-    if (target === nums[pivot]) {
-        return pivot
-    }
-    if (target > nums[pivot]) {
-        left = pivot + 1;
-    } else {
-        right = pivot - 1;
-    }
-    }
-           
-    return -1;
-    
+  let mid= Math.floor(nums.length / 2);
+  let high = nums.length - 1;
+  let low = 0;
+
+  while (low <= high) {
+      if (target === nums[mid]) {
+          return mid;
+      }
+      if (target > nums[mid]) {
+          low = mid + 1;
+      } else if (target < nums[mid]) {
+          high = mid - 1;
+      }
+      mid = Math.floor((high + low) / 2);
+  }
+
+  return -1;
 };
+
+
 
 
 
