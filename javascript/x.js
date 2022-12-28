@@ -2,8 +2,7 @@
 
 
 
-//====> watch video/refacotr then move on LAST DAY
-//https://leetcode.com/problems/car-fleet/
+//====> watch video/refacotr tfor first 2 binary search problems then do next
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -24,7 +23,12 @@
 //NOTE:  fall short a few times on ability to generate combos and permutations even on brute force so far optimizeds sln doesn't even look at that but should study this: second occurrence occured on this:
   //https://leetcode.com/problems/generate-parentheses/
 //https://leetcode.com/problems/daily-temperatures/
+//
 //MOTE: stack was never finished got real difficult didn't do the hard will do on run 2
+
+
+//Binary search:
+//
 
 
 const d = [1]
