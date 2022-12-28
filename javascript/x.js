@@ -2,8 +2,7 @@
 
 
 
-//====> watch video/refacotr then move on LAST DAY
-//https://leetcode.com/problems/car-fleet/
+//====> watch video/refacotr tfor first 2 binary search problems then do next
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
