@@ -13,7 +13,7 @@ var searchMatrix = function(array, target) {
   return false;
 };
 
-//refactor to o(log n):
+//refactor to o(log n):d
 
 
 var searchMatrix = function(array, target) {

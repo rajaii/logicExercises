@@ -2,7 +2,7 @@
 
 
 
-//====> watch video/refacotr tfor first 2 binary search problems then do next
+//====> watch video/attempt https://leetcode.com/problems/koko-eating-bananas/
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
