@@ -1,4 +1,4 @@
-//  from leetcode easy: https://leetcode.com/problems/koko-eating-bananas
+//  from leetcode medium: https://leetcode.com/problems/koko-eating-bananas
 
 var minEatingSpeed = function(p, h) {
   if (p.length > 1 && p.every(pi => pi === p[0]) && h <= p[0]) {
