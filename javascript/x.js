@@ -2,7 +2,8 @@
 
 
 
-//====> watch video/refacotr tfor first 2 binary search problems then do next
+//==>
+//https://leetcode.com/problems/reverse-linked-list/
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -31,9 +32,4 @@
 //
 
 
-const d = [1]
-d[5] = 3;
-console.log(d)
-for (let i = 0; i < d.length; i++) {
-  console.log(d[i]);
-}
+console.log(Math.ceil(2))
