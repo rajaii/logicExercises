@@ -33,3 +33,33 @@ var reverseList = function(head) {
 //prev = cur
 //cur = temp
 //return prev
+
+//brute force: 1/23/2023
+var reverseList = function(head) {
+  if (head === null) {
+      return head;
+  }
+  let cur = head;
+  let arr = [];
+  while (cur !== null) {
+      arr.push(cur.val);
+      cur = cur.next;
+  }
+
+  arr.reverse();
+  const reversed = new ListNode(arr[0], arr[1]);
+  cur = reversed;
+  for (let i = 1; i < arr.length; i++) {
+      cur.next = new ListNode(arr[i], arr[i+1]);
+      cur = cur.next;
+  }
+
+  return reversed;
+};
+
+//PSEUDO
+//traverse and push into an array 
+//reverse the array
+//make new list and set the vals
+
+//return the new list

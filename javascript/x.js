@@ -2,8 +2,8 @@
 
 
 
-//====> watch video and attempt
-//https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+//==>
+//https://leetcode.com/problems/reverse-linked-list/
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
