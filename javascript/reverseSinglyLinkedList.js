@@ -63,3 +63,29 @@ var reverseList = function(head) {
 //make new list and set the vals
 
 //return the new list
+
+var reverseList = function(head) {
+  if (head === null) {
+      return head;
+  }
+  let cur = head;
+  let prev = null;
+  
+  while (cur !== null) {
+      const temp = cur.next;
+      cur.next = prev;
+      prev = cur;
+      cur = temp;
+      if (cur === null) {
+          return prev
+      }
+  }
+};
+
+//PSEUDO
+//set cur
+//set temp as the curs next
+//set the next as the prev
+//set cur to the temp
+
+//return the new list
