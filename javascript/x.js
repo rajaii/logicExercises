@@ -29,7 +29,10 @@
 
 
 //Binary search:
-//
+//redo all from halfway through
+
+//Linked lists:
+//https://leetcode.com/problems/merge-two-sorted-lists
 
 
 console.log(Math.ceil(2))
