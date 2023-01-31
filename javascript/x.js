@@ -2,8 +2,8 @@
 
 
 
-//==>
-//https://leetcode.com/problems/reverse-linked-list/
+//==>  wathc video and refactor to do in place without extra sapce
+//https://leetcode.com/problems/remove-nth-node-from-end-of-list
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -29,7 +29,12 @@
 
 
 //Binary search:
-//
+//redo all from halfway through
+
+//Linked lists:
+//https://leetcode.com/problems/merge-two-sorted-lists
+//https://leetcode.com/problems/reorder-list/
+//https://leetcode.com/problems/remove-nth-node-from-end-of-list
 
 
 console.log(Math.ceil(2))
