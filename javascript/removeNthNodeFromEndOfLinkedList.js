@@ -40,3 +40,45 @@ var removeNthFromEnd = function(head, n) {
 //count - n is how many you will traverse forward
 //now split at count - n
 //return head
+
+//refactor to use no space
+var removeNthFromEnd = function(head, n) {
+  //edge cases
+  if (head.next === null || head.val === undefined) {
+      return null
+  }
+  let cur = head;
+  let len = 0;
+  while (cur !== null) {
+      len += 1;
+      cur = cur.next;
+  }
+  if (len === n && len > 1) {
+      return head.next;
+  }
+
+  //run algo to splice
+  cur = head;
+  let left = head;
+  let right;
+  let count = 0;
+  while (count < n) {
+      cur = cur.next;
+      count += 1;
+  }
+  
+  right = cur;
+  
+  while (true) {
+      if (right === null) {
+          temp = left.next;
+          left.next = null;
+          prev.next = temp;
+          break;
+      }
+      prev = left;
+      left = left.next;
+      right = right.next;
+  }
+  return head;
+};
