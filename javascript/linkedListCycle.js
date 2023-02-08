@@ -51,3 +51,18 @@ var hasCycle = function(head) {
 //looop pushing in visited
 //if (cur in visited) => ret true
 //if out of loop return false
+
+//refactor to o(1) space using cycle
+
+var hasCycle = function(head) {
+  let slow = head;
+  let fast = head;
+  while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+      if (fast === slow) {
+          return true;
+      }
+  }
+  return false;
+};
