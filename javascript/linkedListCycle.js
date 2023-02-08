@@ -29,3 +29,40 @@ var hasCycle = function(head) {
 //val: cur.val,
 //}
 //cur = cur.next
+
+//new problem https://leetcode.com/problems/linked-list-cycle
+
+var hasCycle = function(head) {
+  const visited = new Set();
+  let cur = head;
+  while (cur) {
+      if (visited.has(cur)) {
+          return true;
+      }
+      visited.add(cur);
+      cur = cur.next;
+  }
+
+  return false;
+};
+
+//make a visited array
+
+//looop pushing in visited
+//if (cur in visited) => ret true
+//if out of loop return false
+
+//refactor to o(1) space using cycle
+
+var hasCycle = function(head) {
+  let slow = head;
+  let fast = head;
+  while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+      if (fast === slow) {
+          return true;
+      }
+  }
+  return false;
+};
