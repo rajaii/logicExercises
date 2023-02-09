@@ -3,7 +3,7 @@
 
 
 //==>  watch vide/refactor
-//https://leetcode.com/problems/add-two-numbers/
+//https://leetcode.com/problems/invert-binary-tree/
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -36,6 +36,7 @@
 //https://leetcode.com/problems/reorder-list/
 //https://leetcode.com/problems/remove-nth-node-from-end-of-list
 //https://leetcode.com/problems/add-two-numbers/
+//https://leetcode.com/problems/find-the-duplicate-number/
 
 
 console.log(Math.ceil(2))
