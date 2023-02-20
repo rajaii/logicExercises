@@ -32,3 +32,19 @@ var invertTree = function(root) {
 
 //traverse BFT quque
 //set cur.left to cur.right vice versa
+
+//using recursion:
+
+var invertTree = function(root) {
+  if (root === null) {
+      return null
+  }
+  
+  let temp = root.left;
+  root.left = root.right;
+  root.right = temp;
+  invertTree(root.left);
+  invertTree(root.right);
+  return root;
+  
+};
