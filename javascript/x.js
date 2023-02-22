@@ -2,8 +2,9 @@
 
 
 
-//==>  watch vide/refactor
-//https://leetcode.com/problems/invert-binary-tree/
+//==>  watch vide/refactor to bft
+//https://leetcode.com/problems/maximum-depth-of-binary-tree
+
 
 //next round neetcode
 //==> redo and study on more ie. could not get optimized on own and/or took a number of tries on the brute force or optimized
@@ -38,5 +39,7 @@
 //https://leetcode.com/problems/add-two-numbers/
 //https://leetcode.com/problems/find-the-duplicate-number/
 
+//Trees:
+//https://leetcode.com/problems/maximum-depth-of-binary-tree
 
 console.log(Math.ceil(2))
