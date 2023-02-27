@@ -2,8 +2,8 @@
 
 
 
-//==>  watch vide/refactor to bft
-//https://leetcode.com/problems/maximum-depth-of-binary-tree
+//==>  study and do preorder bft, and study the concepts more 
+//https://leetcode.com/problems/binary-tree-preorder-traversal/
 
 
 //next round neetcode
