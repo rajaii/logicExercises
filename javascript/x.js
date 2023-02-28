@@ -1,9 +1,9 @@
 
 
+//look into algo expert vs techseries.dev, interviewing.io, 
 
-
-//==>  watch vide/refactor to bft
-//https://leetcode.com/problems/maximum-depth-of-binary-tree
+//==>  refactor, and study on sorting methods and practice.
+//https://leetcode.com/problems/majority-element-ii/
 
 
 //next round neetcode
@@ -42,4 +42,6 @@
 //Trees:
 //https://leetcode.com/problems/maximum-depth-of-binary-tree
 
-console.log(Math.ceil(2))
+//Heap/priority queue:
+//https://leetcode.com/problems/last-stone-weight/
+

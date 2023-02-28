@@ -55,3 +55,35 @@ var lastStoneWeight = function(s) {
 //}
 
 //return 0
+
+//refactor in trying neetCode
+
+var lastStoneWeight = function(stones) {
+  //. run logic to play game while there are more than one stones in stones
+  while (stones.length > 1) {
+      const y = Math.max(...stones);
+      stones.splice(stones.indexOf(y), 1);
+      const x = Math.max(...stones);
+      stones.splice(stones.indexOf(x), 1);
+      
+      if (y == x) {
+          continue;
+      }
+
+      stones.push((y-x));
+
+  } 
+
+  return stones[0] || 0;
+};
+
+//PSEUSDO:
+
+//while (stones.length > 1)
+//let y = stones.remove(max);
+//let x = stones.remove(max);
+
+//run logic pushing into stones (y - x) if x !== y
+
+
+//out of loop return stones[0]
