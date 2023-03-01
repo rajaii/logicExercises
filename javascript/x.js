@@ -2,7 +2,7 @@
 
 //look into algo expert vs techseries.dev, interviewing.io, 
 
-//==>  refactor, and study on sorting methods and practice.
+//==>  refactor, then study on sorting methods and practice, and pick another.
 //https://leetcode.com/problems/majority-element-ii/
 
 
