@@ -1,6 +1,8 @@
 //double loop creating an sorted portion of the list and unsorted portion
 //swap the min from unsorted portion to the cur in the sorted portion
 
+//O(n^2)
+
 var sortArray = function(n) {
   //selection sort
   

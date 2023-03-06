@@ -2,6 +2,8 @@
 //use a  boolean to flip if swapped
 //when full pass w/o swap return array or break
 
+//o(n^2)
+
 var sortArray = function(n) {
   //bubble sort:
   for (let i = 0; i < n.length; i++) {
