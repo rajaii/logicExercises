@@ -49,6 +49,6 @@
 //Heap/priority queue:
 //https://leetcode.com/problems/last-stone-weight/
 
-let s = 4/333
+let s = "sadfasf"
 
-console.log(s.toString());
+console.log(s[0]);
