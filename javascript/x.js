@@ -1,9 +1,13 @@
 
 
-//tech interview pro: lesson 3 reading
 
-//==>  refactor, then study on sorting methods and practice, and pick another.
-//https://leetcode.com/problems/majority-element-ii/
+
+
+//watch sln https://www.youtube.com/watch?v=fhD2pdqAt4s&ab_channel=AndyGala refactor: 
+//https://leetcode.com/problems/longest-palindromic-substring///
+
+//==>  study on sorting methods (quick sort and merge sort)
+
 
 
 //next round neetcode
@@ -45,3 +49,6 @@
 //Heap/priority queue:
 //https://leetcode.com/problems/last-stone-weight/
 
+let s = 4/333
+
+console.log(s.toString());
