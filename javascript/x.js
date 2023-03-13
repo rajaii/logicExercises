@@ -3,10 +3,8 @@
 
 
 
-//watch sln https://www.youtube.com/watch?v=fhD2pdqAt4s&ab_channel=AndyGala refactor: 
-//https://leetcode.com/problems/longest-palindromic-substring///
-
-//==>  study on sorting methods (quick sort and merge sort)
+//coderpro session 2 6:13
+//algoexpert twoNumberSum: 6:42 in video
 
 
 
