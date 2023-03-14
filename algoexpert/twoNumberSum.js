@@ -35,7 +35,7 @@ function twoNumberSum(array, targetSum) {
   return [];
 }
 
-//solution 2 o(n) time and space but cleaner and only one loop
+//solution 3 o(n) time and space but cleaner and only one loop
 
 function twoNumberSum(array, targetSum) {
   const nums = new Set();
