@@ -15,7 +15,7 @@ function twoNumberSum(array, targetSum) {
   
 }
 
-//solution 2 o(n) space, o(n) runtime:
+//solution 2 o(n) (technically o(2n)) time and o(n) space
 
 function twoNumberSum(array, targetSum) {
   //make an object of the form {array[i]: index}
@@ -35,3 +35,17 @@ function twoNumberSum(array, targetSum) {
   return [];
 }
 
+//solution 3 o(n) time and space but cleaner and only one loop
+
+function twoNumberSum(array, targetSum) {
+  const nums = new Set();
+  for (let i = 0; i < array.length; i++) {
+    if (nums.has(targetSum - array[i])) {
+      return [array[i], targetSum - array[i]];
+    }
+
+    nums.add(array[i]);
+  }
+
+  return [];
+}
