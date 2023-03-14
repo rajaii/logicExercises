@@ -32,7 +32,18 @@ class Solution {
   }
 
   helperReverse (string, toAppend) {
-    
+    if (!string.length) {
+      return toAppend;
+    }
+
+    toAppend += string[string.length - 1];
+    const toPass = string.slice(0, string.length - 1);
+
+    return this.helperReverse(toPass, toAppend);
+  }
+
+  reverse () {
+    return this.helperReverse(this.string, "");
   }
 }
 
