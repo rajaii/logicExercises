@@ -1,10 +1,16 @@
 
 
 
+//  Techseries:
+  //  work more on solution class and recursive vs iterative problems ask fb
 
+//  Coderpro:
+  // session 2 6:13:
+  
 
-//coderpro session 2 6:13
-//algoexpert twoNumberSum: 6:42 in video
+//  Algoexpert
+  //  DS lesson 2
+  // twoNumberSum: 6:42 in video
 
 
 
