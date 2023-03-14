@@ -1,56 +1,63 @@
 //  Recursive with built in functions
 
-// class Solution {
-//   constructor (string) {
-//     this.string = string;
-//   }
+class SolutionRecursiveWBuiltInFns {
+  constructor (string) {
+    this.string = string;
+  }
 
-//   helperReverse (str, toAppendStr) {
-//     const a = str.split("");
+  helperReverse (str, toAppendStr) {
+    const a = str.split("");
 
-//     if (!a.length) {
-//       return toAppendStr;
-//     }
+    if (!a.length) {
+      return toAppendStr;
+    }
 
-//     toAppendStr += a[a.length - 1];
+    toAppendStr += a[a.length - 1];
 
-//     a.pop();
-//     const toPass = a.join("");
-//     return this.helperReverse(toPass, toAppendStr);
+    a.pop();
+    const toPass = a.join("");
+    return this.helperReverse(toPass, toAppendStr);
     
-//   }  
+  }  
 
-//   reverse () {
-//     return this.helperReverse(this.string, "");
-//   }
-// }
+  reverse () {
+    return this.helperReverse(this.string, "");
+  }
+}
+
+const s1 = new SolutionRecursiveWBuiltInFns("aaakddd");
+
+console.log(s1.reverse());
 
 //Recursive following the iterative flow
-// class Solution {
-//   constructor (string) {
-//     this.string = string;
-//   }
+class SolutionRecursive {
+  constructor (string) {
+    this.string = string;
+  }
 
-//   helperReverse (string, toAppend) {
-//     if (!string.length) {
-//       return toAppend;
-//     }
+  helperReverse (string, toAppend) {
+    if (!string.length) {
+      return toAppend;
+    }
 
-//     toAppend += string[string.length - 1];
-//     const toPass = string.slice(0, string.length - 1);
+    toAppend += string[string.length - 1];
+    const toPass = string.slice(0, string.length - 1);
 
-//     return this.helperReverse(toPass, toAppend);
-//   }
+    return this.helperReverse(toPass, toAppend);
+  }
 
-//   reverse () {
-//     return this.helperReverse(this.string, "");
-//   }
-// }
+  reverse () {
+    return this.helperReverse(this.string, "");
+  }
+}
+
+const s2 = new SolutionRecursive("aaakddd");
+
+console.log(s2.reverse());
 
 
-//Recursive following the iterative flow o(n) time and space
-
-class Solution {
+//iterative
+class SolutionIterative {
   constructor (string) {
     this.string = string;
   }
@@ -64,9 +71,13 @@ class Solution {
   }
 }
 
-const s = new Solution("aaakkkddd");
 
-console.log(s.reverse());
+const s3 = new SolutionIterative("aaakddd");
+
+console.log(s3.reverse());
+
+
+
 
 
 
