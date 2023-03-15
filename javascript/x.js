@@ -10,7 +10,8 @@
 
 //  Algoexpert
   //  DS lesson 2
-  // twoNumberSum: 6:42 in video
+  //  systems lesson 
+  // threeNumberSum: hint 2
 
 
 
