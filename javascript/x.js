@@ -2,15 +2,16 @@
 
 
 //  Techseries:
-  //  work more on solution class and recursive vs iterative problems ask fb
+  //  next sec
 
 //  Coderpro:
-  // session 2 6:13:
+  // session 2 do in Python from scratch, watch video again and again until get it
   
 
 //  Algoexpert
-  //  DS lesson 2
-  // twoNumberSum: 6:42 in video
+  //  DS lesson 2 lesson 4 memory 10 minutes
+  //  systems lesson 4 16.5 minutes
+  // threeNumberSum: hint 2
 
 
 
