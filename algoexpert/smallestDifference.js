@@ -46,3 +46,38 @@ function smallestDifference(arrayOne, arrayTwo) {
   return solution;
 }
 
+//Solution using recursion and class o(n) time and o(1)  space
+function smallestDifference(arrayOne, arrayTwo) {
+  class Solution {
+    constructor (aOne, aTwo) {
+      this.aOne = aOne.sort((a, b) => a - b);
+      this.aTwo = aTwo.sort((a,b) => a - b);
+    }
+
+    helpFindSmallestDiff (arrOne, arrTwo, minDiff, output, i, j) {
+      if (Math.abs(arrOne[i] - arrTwo[j]) < minDiff) {
+        minDiff = Math.abs(arrOne[i] - arrTwo[j]);
+        output[0] = arrOne[i];
+        output[1] = arrTwo[j];
+      } 
+      
+       if (i >= arrOne.length - 1 && j === arrTwo.length - 1) {
+        return output;
+      } 
+      
+      if (arrOne[i] < arrTwo[j] || j === arrTwo.length - 1) {
+        i += 1;
+      } else {
+        j += 1;
+      }
+
+      return this.helpFindSmallestDiff(arrOne, arrTwo, minDiff, output, i, j);
+    }
+
+    findSmallestDiff () {
+      return this.helpFindSmallestDiff(this.aOne, this.aTwo, Infinity, [], 0, 0);
+    }
+  }
+  return new Solution(arrayOne, arrayTwo).findSmallestDiff();
+}
+
