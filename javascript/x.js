@@ -11,7 +11,7 @@
 //  Algoexpert
   //  DS lesson 2 lesson 4 memory 10 minutes
   //  systems lesson 4 16.5 minutes
-  // smallest difference: try doing class recurison
+  // sorted squares array: do the hints
 
 
 
