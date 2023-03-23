@@ -11,7 +11,7 @@
 //  Algoexpert
   //  DS lesson 2 lesson 4 memory 10 minutes
   //  systems lesson 4 16.5 minutes
-  // move element to end
+  // subarray-sort watch video all the way and do refactors
 
 
 
