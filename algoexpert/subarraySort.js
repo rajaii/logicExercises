@@ -56,5 +56,52 @@ function subarraySort(array) {
   return [indexOne, indexTwo]
 }
 
+//Refactor for cleanliness
+function subarraySort(array) {
+  const indices = [-1,-1];
+  
+  let smallest = Infinity;
+  let largest = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < array[i - 1]) {
+      if (array[i] < smallest) {
+        smallest = array[i];
+      }
+
+      if (array[i - 1] > largest) {
+        largest = array[i -  1];
+      }
+    }
+  }
+
+  if (smallest === Infinity) {
+    return indices;
+  }
+  
+  //loop forwards again to see where array value is <= smallest and set to indexOne
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > smallest) {
+      indices[0] = i;
+      break;
+    }
+
+    if (array[i] == smallest) {
+      indices[0] = i + 1;
+      break;
+    }
+  }
+
+  //loop backwards and see where array value is >= largest and set to indexTwo
+  for (let i = array.length - 1; i > -1; i--) {
+    if (array[i] <= largest) {
+      indices[1] = i;
+      break;
+    }
+  }
+
+  return indices;
+}
+
+
 
 
