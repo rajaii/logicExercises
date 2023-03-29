@@ -1,3 +1,5 @@
+//EASY:
+
 //first solution o(n) time o(n) space
 function tournamentWinner(competitions, results) {
   //get object of the form {name: 0}

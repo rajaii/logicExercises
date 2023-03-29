@@ -11,7 +11,7 @@
 //  Algoexpert
   //  DS lesson 2 lesson 4 memory 10 minutes
   //  systems lesson 4 16.5 minutes
-  // tournamentWinner watch hints/ video all the way and do refactors and class
+  // tonotonicArray first refactor on own "can I do better?" then watch hints/ video all the way and do refactors and class w recursion
 
 
 
