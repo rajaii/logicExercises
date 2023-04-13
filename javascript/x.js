@@ -11,7 +11,9 @@
 //  Algoexpert
   //  DS lesson 2 lesson 4 memory 10 minutes
   //  systems lesson 4 16.5 minutes
+ // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
   // watch video and read on recursion bst traversal for findClosestVAlueBST
+  //longestPeak finish and ^ if videos work
 
 
 
