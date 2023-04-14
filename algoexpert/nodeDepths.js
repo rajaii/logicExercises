@@ -56,3 +56,38 @@ function nodeDepths(root) {
 
   return Object.values(depths).reduce((a,c) => a + c, 0);
 }
+
+//solution 3 using class and recursion for practice o(n) time and space
+
+function nodeDepths(root) {
+  class FindDepthOfRoot {
+    constructor () {
+      this.root = root;
+    }
+
+    findDepthHelper (node, depths) {
+      if (node === null) {
+        return;
+      }
+
+      if (node.left) {
+        depths[node.left.value] = depths[node.value] + 1 || 1;
+      }
+
+      if (node.right) {
+        depths[node.right.value] = depths[node.value] + 1 || 1;
+      }
+      
+      this.findDepthHelper(node.left, depths);
+      this.findDepthHelper(node.right, depths);
+    }
+
+    findDepth () {
+      const depths = {};
+      this.findDepthHelper(root, depths);
+      return Object.values(depths).reduce((a,c) => a + c, 0);
+    }
+  }
+
+  return new FindDepthOfRoot().findDepth();
+}
