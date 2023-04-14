@@ -17,6 +17,8 @@
   // longestPeak
   //  nodeDepths
 
+  //think/refactor/recursion for nodeDepth
+
 
 
 //Algo Expert: try again on own:
