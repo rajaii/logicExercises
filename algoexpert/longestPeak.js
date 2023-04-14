@@ -1,5 +1,6 @@
 //MEDIUM:
 
+//first sln: o(n) time o(1) space
 function longestPeak(array) {
   // set the peaks array to find max
   let maxPeak = 0;

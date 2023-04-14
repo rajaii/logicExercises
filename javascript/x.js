@@ -17,6 +17,8 @@
   // longestPeak
   //  nodeDepths
 
+  //think/refactor/recursion for arrayOfProducts solution 2 handle the 0's case
+
 
 
 //Algo Expert: try again on own:
