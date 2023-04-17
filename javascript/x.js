@@ -16,8 +16,13 @@
   // findClosestVAlueBST
   // longestPeak
   //  nodeDepths
+  //  arrayOfProducts 
 
-  //think/refactor/recursion for arrayOfProducts solution 2 handle the 0's case
+  //try these with hints:
+  // findClosestVAlueBST
+  // longestPeak
+  //  nodeDepths
+  //  arrayOfProducts - hits
 
 
 
