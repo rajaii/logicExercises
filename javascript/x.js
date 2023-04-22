@@ -20,6 +20,7 @@
   // longestPeak
   //  nodeDepths
   //  arrayOfProducts 
+  //  minimumWaitingTime
 
   //try these with hints:
   // findClosestVAlueBST
