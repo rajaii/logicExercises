@@ -12,7 +12,7 @@
   //  DS lesson 2 lesson 4 memory 10 minutes
   //  systems lesson 4 16.5 minutes
  // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
- // finish bestSeat then do:
+ // video/hints bestSeat then do:
   //next hintsrefactor zeroSumArray to improve time
 
  
