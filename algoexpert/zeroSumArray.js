@@ -23,3 +23,21 @@ function zeroSumSubarray(nums) {
 
 
 //return falase
+
+//sln 2 after study o(n) on time and space
+
+function zeroSumSubarray(nums) {
+  // keep track of nums [o,i] in set and if repeats return true
+  const numSet = new Set();
+  numSet.add(0);
+  sum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    if (numSet.has(sum)) {
+      return true;
+    }
+    numSet.add(sum);
+  }
+
+  return false;
+}
