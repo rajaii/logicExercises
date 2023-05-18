@@ -9,10 +9,12 @@
 //  systems lesson 4 16.5 minutes
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
-//==>
-//validate-bst
+//==> do easy then:
+//BST construction then hard
 
-// maxSumIncreasingSubsequence redo later
+// redo later these could not be done quickly and without looking at the hints/videos:
+//maxSumIncreasingSubsequence
+//validateBST
 
 const visited = new Set();
 const cur = [null, "mother"];
