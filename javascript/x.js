@@ -9,8 +9,10 @@
 //  systems lesson 4 16.5 minutes
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
-//==> do easy then:
-//BST construction then hard
+//==> BST LEARN BASH
+//dpeth first search then V
+//BST construction finish //the === case in remove then do insert  and then watch video hints => then
+//hard
 
 // redo later these could not be done quickly and without looking at the hints/videos:
 //maxSumIncreasingSubsequence
