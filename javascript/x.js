@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-//dpeth first search then V
+//dpeth first search watch videa and refactor try a harder one on bst V
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
