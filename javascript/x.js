@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-//bst traversal then Done BUT do iteratively both bft and dft (dft a few times) and bft, then figure how the in order etc applies to dft bft iterative traversals and how to do these with recursion
+//BST traversal keep learning different types
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
