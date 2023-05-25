@@ -9,8 +9,9 @@
 //  systems lesson 4 16.5 minutes
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
+//
 //==> BST LEARN BASH
-//BST traversal keep learning different types
+//find kth largest value in bst then non bst hard then another bst
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
@@ -19,11 +20,9 @@
 //validateBST
 
 const visited = new Set();
-const cur = [null, "mother"];
-
-if (cur[0]) {
-  console.log("asdlfsf");
-}
+const cur = [1, 2, 3];
+cur.sort((a, b) => b - a);
+console.log(cur);
 
 //later
 // watch video and read on recursion bst traversal for:
