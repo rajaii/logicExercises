@@ -11,6 +11,7 @@
 
 //
 //==> BST LEARN BASH
+//finish videp/refactor for validateThreeNodes then do non bst medium then bst easy or med
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
