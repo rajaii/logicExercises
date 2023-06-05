@@ -11,7 +11,6 @@
 
 //
 //==> BST LEARN BASH
-//find kth largest value in bst then non bst hard then another bst
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
@@ -19,10 +18,9 @@
 //maxSumIncreasingSubsequence
 //validateBST
 
-const visited = new Set();
-const cur = [1, 2, 3];
-cur.sort((a, b) => b - a);
-console.log(cur);
+const one = true;
+const tow = false;
+console.log(one || tow)
 
 //later
 // watch video and read on recursion bst traversal for:
