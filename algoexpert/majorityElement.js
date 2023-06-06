@@ -23,3 +23,27 @@ function majorityElement(array) {
     return majority || -1;
     
   }
+
+  //sln 2 o(n) time o(1) space
+  function majorityElement(array) {
+    //set the count
+    let count = 1;
+    let cur = array[0];
+    //loop resetting cur at every stop where count is 0
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] === cur) {
+        count += 1;
+      } else {
+        count -= 1;
+        if (count === 0) {
+          cur = array[i];
+          count = 1;
+        } 
+      }
+    }
+  
+    if (count >= 1) {
+      return cur;
+    }
+    return -1;
+  }

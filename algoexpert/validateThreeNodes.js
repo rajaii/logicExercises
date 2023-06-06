@@ -48,7 +48,7 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     return false;
   }
 
-  //solution 2 same efficiency as solution 1 just refactored after watching video; I prefer mine it looks cleaner
+  //solution 2 o(h) where h is height of tree; just refactored after watching video; I prefer mine it looks cleaner and o(d) is more efficient
   function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     //set the variables and boolean needed 
     let mom = null;
