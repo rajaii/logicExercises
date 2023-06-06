@@ -11,7 +11,7 @@
 
 //
 //==> BST LEARN BASH
-//finish videp/refactor for validateThreeNodes then do non bst medium then bst easy or med
+//finish videp/refactor for validateThreeNodes then do better sln for majorityElement then bst easy or med
 //BST construction finish //the === case in remove then do insert  and then watch video hints => then
 //hard
 
@@ -38,3 +38,6 @@ console.log(one || tow)
 
 //Algo Expert: try again on own:
 //three number sum: finished
+
+
+
