@@ -11,7 +11,7 @@
 
 //
 //==> BST LEARN BASH
-// watch bubble sort video and refactor,  then do med sort, then do easy med bst, then majorityElement watch video on bit manipulation solution and implement,   then watch video/redo construct bst, then a hard non bst, then easy/med bst, then haard non bst, then redo construct bst
+// three-number-sort work on bubble sort conditions, then do easy med bst, then majorityElement watch video on bit manipulation solution and implement,   watch bst construction video and impement insert, and others that didn't pass, , then a hard non bst, then easy/med bst, then haard non bst, then redo construct bst
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
@@ -185,4 +185,33 @@ bin.right.left.right = new BST(13);
 
 bin.insert(1000);
 bin.remove(15);
-console.log(bin);
+
+console.log(new Date().toISOString());
+x = [1, 2, 3, 4];
+const i = x.findIndex((e) => {
+  if (e > 5) {
+    return true;
+  }
+  return false;
+});
+
+if (
+  x.findIndex((e) => {
+    if (e > 5) {
+      return true;
+    }
+    return false;
+  })
+) {
+  console.log(i);
+}
+
+//loop sorting the ones above order[2];
+left = array.findIndex((e) => {
+  if (e > order[2]) {
+    return true;
+  }
+});
+const secondLeftHolder = left;
+right = left + 1;
+bubbleSort(left, right, increasing, false);
