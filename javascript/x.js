@@ -11,7 +11,7 @@
 
 //
 //==> BST LEARN BASH
-// three-number-sort work on bubble sort conditions, then do easy med bst, then majorityElement watch video on bit manipulation solution and implement,   watch bst construction video and impement insert, and others that didn't pass, , then a hard non bst, then easy/med bst, then haard non bst, then redo construct bst
+// three-number-sort finish last one from video, then do easy med bst, then majorityElement watch video on bit manipulation solution and implement,   watch bst construction video and impement insert, and others that didn't pass, , then a hard non bst, then easy/med bst, then haard non bst, then redo construct bst
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
