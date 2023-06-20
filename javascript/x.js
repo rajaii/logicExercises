@@ -6,11 +6,8 @@
 
 //  Algoexpert
 //  DS lesson 2 lesson 4 memory 10 minutes
-//  systems lesson 4 16.5 minutes
+//  systems storage: read, then read all prev and move on
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
-
-//hackerrank
-//new hackerrank
 
 //==> BST LEARN BASH
 // do easy med bst, then majorityElement watch video on bit manipulation solution and implement,   watch bst construction video and impement insert, and others that didn't pass, , then a hard non bst, then easy/med bst, then haard non bst, then redo construct bst
