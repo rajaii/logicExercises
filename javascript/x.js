@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-//  min rewards watch video refactor,  do easy then med non bst, do easy then med bst, do hard non bst, do hard bst
+// fibonacci, min rewards watch video refactor,  do easy then med non bst, do easy then med bst, do hard non bst, do hard bst
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
