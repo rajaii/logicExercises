@@ -1,6 +1,6 @@
 //EASY:
 
-//solution 1 o(n) time
+//solution 1 o(n) time o(1) space
 
 function getNthFib(n) {
   if (n === 0 || n === 1) {
