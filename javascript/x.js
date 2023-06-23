@@ -5,18 +5,19 @@
 // session 2 do in Python from scratch, watch video again and again until get it
 
 //  Algoexpert
-//  logarithm
-//  proxies
+//  Arrays
+//  hashing
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-// fibonacci, min rewards watch video refactor,  do easy then med non bst, do easy then med bst, do hard non bst, do hard bst
+// easy non bst, med bst, min rewards watch video refactor, hard non bst, do easy bst, then med non bst,
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
 // redo later these could not be done quickly and without looking at the hints/videos:
 //maxSumIncreasingSubsequence
 //validateBST
+//getNthfibonacci only the memoize section see video at 10 min
 
 //later
 // watch video and read on recursion bst traversal for:f

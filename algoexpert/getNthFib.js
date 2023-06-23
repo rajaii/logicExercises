@@ -42,7 +42,7 @@ function getNthFib(n) {
   return helper(2, [0, 1], 1);
 }
 
-//solution 3 recursion from algo expert
+//solution 3 recursion from algo expert time 2^n space o(n) (callstack)
 
 function getNthFib(n) {
   if (n === 1) {
