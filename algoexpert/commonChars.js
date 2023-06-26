@@ -56,3 +56,36 @@ function commonCharacters(strings) {
 
   return commons;
 }
+
+//final refactor same as mine but running on smallest string and thus less iterations to run
+function commonCharacters(strings) {
+  let smallest;
+  let smCount = Infinity;
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length < smCount) {
+      smCount = strings[i].length;
+      smallest = strings[i];
+    }
+  }
+  //set the array to push into and the one with the charachters to check
+  const charsToCheck = smallest.split("");
+  const commonSet = new Set();
+
+  //loop charsToCheck nested looping strings and checking all chars
+  for (let i = 0; i < charsToCheck.length; i++) {
+    for (let j = 0; j < strings.length; j++) {
+      if (!strings[j].includes(charsToCheck[i])) {
+        break;
+      }
+
+      if (j === strings.length - 1) {
+        commonSet.add(charsToCheck[i]);
+      }
+    }
+  }
+
+  const commons = [];
+  commonSet.forEach((e) => commons.push(e));
+
+  return commons;
+}
