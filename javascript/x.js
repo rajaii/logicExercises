@@ -6,11 +6,11 @@
 
 //  Algoexpert
 //  Arrays
-//  hashing
+//  relational databases
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-// easy non bst, med bst, min rewards watch video refactor, hard non bst, do easy bst, then med non bst,
+// easy non bst, med bst, min rewards watch video non naive solution refactor, hard non bst, do easy bst, then med non bst,
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
@@ -37,4 +37,9 @@
 //Algo Expert: try again on own:
 //three number sum: finished
 
-console.log(parseFloat(122222).toFixed(6));
+const a = new Set();
+
+a.add("c");
+a.add("c");
+
+console.log(a);
