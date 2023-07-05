@@ -43,3 +43,8 @@ a.add("c");
 a.add("c");
 
 console.log(a);
+const x = new Set();
+x.add([2, 1]);
+x.add([0, 0]);
+
+console.log(x.has([2, 1]));
