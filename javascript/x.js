@@ -48,3 +48,5 @@ x.add([2, 1]);
 x.add([0, 0]);
 
 console.log(x.has([2, 1]));
+l = new Array(4);
+console.log(l);
