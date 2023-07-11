@@ -37,16 +37,6 @@
 //Algo Expert: try again on own:
 //three number sum: finished
 
-const a = new Set();
-
-a.add("c");
-a.add("c");
-
-console.log(a);
-const x = new Set();
-x.add([2, 1]);
-x.add([0, 0]);
-
-console.log(x.has([2, 1]));
-l = new Array(4);
-console.log(l);
+const s = '4    whiter';
+const str = s.split(' ');
+console.log(str.filter((e) => e !== ''));
