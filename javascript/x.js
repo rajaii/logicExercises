@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-// med non bst, easy bst, hard non bst, then med non bst,
+// Mon: longesSubarrayWtihsum watch video redo 8:59, Tues single cycle check again, hard,
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
@@ -36,15 +36,5 @@
 
 //Algo Expert: try again on own:
 //three number sum: finished
-
-const a = new Set();
-
-a.add("c");
-a.add("c");
-
-console.log(a);
-const x = new Set();
-x.add([2, 1]);
-x.add([0, 0]);
-
-console.log(x.has([2, 1]));
+const a = [1, 1, 1, 2, 3, 30];
+console.log(a[-1]);
