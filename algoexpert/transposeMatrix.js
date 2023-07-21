@@ -18,3 +18,19 @@ function transposeMatrix(matrix) {
 
   return transposed;
 }
+
+//same time/space but different approach
+function transposeMatrix(matrix) {
+  //set the transposed
+  const transposed = [];
+
+  for (let i = 0; i < matrix[0].length; i++) {
+    let newRow = [];
+    for (let j = 0; j < matrix.length; j++) {
+      newRow.push(matrix[j][i]);
+    }
+    transposed.push(newRow);
+  }
+
+  return transposed;
+}
