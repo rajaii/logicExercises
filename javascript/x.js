@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-// Tues single cycle check again, hard,
+// mon easy, tues med, wed hard
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
