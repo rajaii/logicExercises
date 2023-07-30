@@ -10,7 +10,7 @@
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
 
 //==> BST LEARN BASH
-// med non str array, hard str array, hard non str array =>
+// review bubble sort and insertion sort and then med, hard str array, hard non str array =>
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
