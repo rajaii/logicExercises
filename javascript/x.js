@@ -8,9 +8,14 @@
 //  Hash Tables
 //  specialized storage paradigm
 // https://josephharwood-62087.medium.com/recursion-and-binary-search-trees-in-javascript-ae965b9ea01d
+//30 min:
+//if have it good, but if lost look at hints
+//50 min:
+//hints if not done and testing check if on right track.
+//60 min watch vid always to keep moving forward and learning
 
 //==> BST LEARN BASH
-// review bubble sort and insertion sort and then med, hard str array, hard non str array =>
+// video for search-in-sorted-matrix, med any non str array, very hard str array, hard non str array =>
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
@@ -36,5 +41,3 @@
 
 //Algo Expert: try again on own:
 //three number sum: finished
-const a = [1, 1, 1, 2, 3, 30];
-console.log(a[-1]);
