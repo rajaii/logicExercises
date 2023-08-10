@@ -13,9 +13,14 @@
 //50 min:
 //hints if not done and testing check if on right track.
 //60 min watch vid always to keep moving forward and learning
+//when watching Vid:
+//DO NOT code until after vid
+//if don't understand something and keep getting lost ie does not click after he shows the flow, revind replay
+//AFTER theroretical portion (non python coding) is done try to reporoduce
+//if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
-//==> BST LEARN BASH
-// video for search-in-sorted-matrix, med any non str array, very hard str array, hard non str array =>
+//==>
+//  easy any, med any, hard, very hard
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
@@ -24,13 +29,16 @@
 //validateBST
 //getNthfibonacci only the memoize section see video at 10 min
 
-//later
-// watch video and read on recursion bst traversal for:f
+//For Ones I couldn't do alone:
+//later (was able to do with theory walkthrough)
 // longestPeak
 //  nodeDepths
 //  arrayOfProducts
 //  minimumWaitingTime
 //  zeroSumArray
+// fournumberSum
+
+//later (was unable to do even with theory walkthrough had to return later
 
 //not priority but validateThreeNodes solution 2 the way they did it
 
