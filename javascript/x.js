@@ -20,7 +20,7 @@
 //if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
 //==>
-//  selection sort, med any, hard, very hard
+//  quick sort start at HERE keep watchin vid, med any, hard, very hard
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
