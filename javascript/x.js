@@ -51,3 +51,8 @@
 
 //Algo Expert: try again on own:
 //three number sum: finished
+
+let x = new Set();
+x.add('k');
+x.add('k');
+console.log(x);
