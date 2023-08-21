@@ -20,7 +20,7 @@
 //if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
 //==>
-//    hard, very hard
+//  hard bst, very hard string, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative)
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
