@@ -20,7 +20,7 @@
 //if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
 //==>
-//    hard, very hard
+//  video for minimum-characters-for-words then  hard, very hard
 
 //learn what recursion does undeer the hood as I am getting good with using it
 
