@@ -20,17 +20,10 @@
 //if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
 //==>
-//  hard bst, very hard string, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative)
-
-//learn what recursion does undeer the hood as I am getting good with using it
-
-// redo later these could not be done quickly and without looking at the hints/videos:
-//maxSumIncreasingSubsequence
-//validateBST
-//getNthfibonacci only the memoize section see video at 10 min
+//  find-successor second sln and walkthrough, very hard string, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative)
 
 //For Ones I couldn't do alone:
-//later (was able to do with theory walkthrough)
+//later revisit (was able to do with theory walkthrough)
 // longestPeak
 //  nodeDepths
 //  arrayOfProducts
@@ -38,21 +31,7 @@
 //  zeroSumArray
 // fournumberSum
 // quickSort
+
+//later REDO WAS STUMPED (was unable to do even with theory walkthrough had to return later
 //max-subset-sum-no-adjacent
-
-//later (was unable to do even with theory walkthrough had to return later
-
-//not priority but validateThreeNodes solution 2 the way they did it
-
-//try these with hints:
-// findClosestVAlueBST
-// longestPeak
-//  nodeDepths
-
-//Algo Expert: try again on own:
-//three number sum: finished
-
-let x = new Set();
-x.add('k');
-x.add('k');
-console.log(x);
+//find-nodes-distance-k
