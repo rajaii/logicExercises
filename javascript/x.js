@@ -20,7 +20,7 @@
 //if stuck more than 30 min of that look at answer, reproduce from that, move on and put in second "later" list to return
 
 //==>
-//  find-loop watch video figure out the math behind it and code the o(1) space sln then => very hard string, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative)
+//  merge-linked-lists watch video and reproduce, very hard string, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative)
 
 //For Ones I couldn't do alone:
 //later revisit (was able to do with theory walkthrough)
@@ -31,6 +31,7 @@
 //  zeroSumArray
 // fournumberSum
 // quickSort
+//  find-loop constant space
 
 //later REDO WAS STUMPED (was unable to do even with theory walkthrough had to return later
 //max-subset-sum-no-adjacent
