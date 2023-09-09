@@ -1,5 +1,6 @@
 //EASY
 
+//o(rows * cols) === o(n) time o(1)  space
 var islandPerimeter = function (grid) {
   //set count
   let count = 0;
