@@ -15,7 +15,7 @@
 //60 min watch vid always to keep moving forward and learning
 
 //==>
-//  build queue from scratch, medium graph, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
+//  build queue from scratch go over the dft mthods and their visual appearance, see algy, medium graph, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
 
 //For Ones I couldn't do alone:
 //later revisit (was able to do with theory walkthrough)
