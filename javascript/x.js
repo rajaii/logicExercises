@@ -14,10 +14,10 @@
 //hints if not done and testing check if on right track.
 //60 min watch vid always to keep moving forward and learning
 
-//==>
-//  build queue from scratch, medium graph, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
+//==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
+//   medium not graph, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
 
-//For Ones I couldn't do alone:
+//For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
 // longestPeak
 //  nodeDepths
@@ -27,8 +27,13 @@
 // fournumberSum
 // quickSort
 //  find-loop constant space
+//river-sizes
 
-//later REDO WAS STUMPED (was unable to do even with theory walkthrough had to return later
+//later REDO for sure could not do at all => WAS STUMPED
 //max-subset-sum-no-adjacent
 //find-nodes-distance-k
 //apartment-hunting
+
+const x = [['i', 'j']];
+
+console.log(x.includes(['i', 'j']));

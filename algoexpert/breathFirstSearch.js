@@ -1,5 +1,6 @@
 //MEDIUM:
 
+//o(v * e) vertices === v and e === edges of graph, o(v) space
 class Node {
   constructor(name) {
     this.name = name;
