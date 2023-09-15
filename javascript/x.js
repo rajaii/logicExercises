@@ -15,7 +15,7 @@
 //60 min watch vid always to keep moving forward and learning
 
 //==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
-//   medium not graph, back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
+//   back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
 
 //For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
@@ -34,6 +34,17 @@
 //find-nodes-distance-k
 //apartment-hunting
 
-const x = [['i', 'j']];
+class LinkedList {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
-console.log(x.includes(['i', 'j']));
+const x = new LinkedList(1);
+x.next = new LinkedList(12);
+x.next.next = new LinkedList(3);
+
+const o = { x: 1 };
+
+console.log(o[x]);
