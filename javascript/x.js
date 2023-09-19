@@ -13,9 +13,13 @@
 //50 min:
 //hints if not done and testing check if on right track.
 //60 min watch vid always to keep moving forward and learning
+//always pseudo and ?'s first
+//always comment
+//always last proofread before clicking submit
+//always refactor
 
 //==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
-//   back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
+//  back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
 
 //For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
