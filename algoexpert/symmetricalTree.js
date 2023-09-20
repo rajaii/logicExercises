@@ -1,6 +1,6 @@
 //MEDIUM:
 
-//o(2n) === 0(n) time; o(4n) === o(n) space
+//o(2n) === 0(n) time; o(4h) === o(h) where h is height of the tree space
 function symmetricalTree(tree) {
   const queue1 = [tree];
   const queue2 = [tree];
@@ -34,4 +34,17 @@ function symmetricalTree(tree) {
   }
 
   return true;
+}
+
+//same space/time but recursive:
+function symmetricalTree(tree) {
+  function check(left, right) {
+    if (left !== null && right !== null && left.value === right.value) {
+      return check(left.left, right.right) && check(left.right, right.left);
+    }
+
+    return left === right;
+  }
+
+  return check(tree.left, tree.right);
 }
