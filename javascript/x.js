@@ -19,7 +19,7 @@
 //always refactor
 
 //==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
-//  easy => med string array (leetcode), tackle WAS STUMPED's, then easy => medium array and str (leetcode), back to sorting redo quick sort video understand code and others, revisit invertBinaryTree do it with bft building queue from scratch,  work on dft with stack (iterative),
+// easy => medium array and str (leetcode), back to sorting redo quick sort video understand code and others, reconstruct-bst video
 
 //For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
@@ -35,36 +35,6 @@
 
 //later REDO for sure could not do at all => WAS STUMPED
 //watch hteory walkthrough, attempt, watch code walkthrough if still stumped in 45
-//reconstruct-bst
 //max-subset-sum-no-adjacent
 //find-nodes-distance-k
 //apartment-hunting
-
-const s = '+180080r8000';
-
-function validatePhoneNumber(phoneNumber) {
-  if (
-    phoneNumber.length !== 12 ||
-    phoneNumber[0] !== '+' ||
-    phoneNumber[1] !== '1'
-  ) {
-    return false;
-  } else if (
-    phoneNumber
-      .slice(1)
-      .split('')
-      .findIndex((s) => isNaN(parseInt(s, 10))) !== -1
-  ) {
-    return false;
-  }
-
-  return true;
-}
-// console.log(
-//   !s
-//     .slice(1)
-//     .split('')
-//     .findIndex((s) => typeof parseInt(s, 10) !== 'number') !== -1
-// );
-console.log(typeof parseInt('i', 10));
-console.log(validatePhoneNumber(s));
