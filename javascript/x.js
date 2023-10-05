@@ -19,7 +19,7 @@
 //always refactor
 
 //==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
-// easy => medium array and str (leetcode), back to sorting redo quick sort video understand code and others, reconstruct-bst video
+// easy => medium array and str (leetcode), back to sorting redo quick sort video understand code and others, reconstruct-bst video redo, binary tree medium
 
 //For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
@@ -38,3 +38,4 @@
 //max-subset-sum-no-adjacent
 //find-nodes-distance-k
 //apartment-hunting
+const k = /[^A-Za-z]/g;

@@ -1,0 +1,75 @@
+//Given a sentence with multiple lowercase words separated by spaces, write a Javascript function that finds and returns the longest word
+// in the sentence. If there are multiple words of the same length, choose one that has the highest number of vowels.
+//  Ignore any character in the sentence that is not an English letter or a space. Find the most efficient way to achieve this.
+
+function longestWordInSentence(sentence) {
+  //split sentence
+  const splitSentence = sentence.split(' ');
+
+  //set counter and regex and string to return
+  let longest = [''];
+  const regex = /[a-zA-Z]/;
+
+  //loop running counter and tracking longest
+  for (let i = 0; i < splitSentence.length; i++) {
+    let count = 0;
+    for (let j = 0; j < splitSentence[i].length; j++) {
+      if (regex.test(splitSentence[i][j])) {
+        count += 1;
+      }
+    }
+    if (count > longest[0].length) {
+      longest = [splitSentence[i]];
+    } else if (count > 0 && count === longest[0].length) {
+      longest.push(splitSentence[i]);
+    }
+  }
+
+  const punctuation = /[\.,?!]/;
+  //count vowels because more than one longest
+  if (longest.length > 1) {
+    const vowels = /[aeiou+]/;
+    const counts = [];
+    for (let i = 0; i < longest.length; i++) {
+      let count = 0;
+      for (let j = 0; j < longest[i].length; j++) {
+        if (vowels.test(longest[i][j])) {
+          count += 1;
+        }
+      }
+      counts.push(count);
+    }
+    let indexOfLongest = counts.indexOf(Math.max(...counts));
+    return longest[indexOfLongest].replace(punctuation, '');
+  }
+
+  //1 longest so return that
+  if (longest.length === 1 && longest[0].length > 0) {
+    return longest[indexOfLongest].replace(punctuation, '');
+  }
+
+  //return whatever would be expected in the no longest case would have asked interviewer
+  return '';
+}
+
+//?'s for interviewer:
+//how to handle emtpy string or no answer case??
+//ignore non letters in the count as well??
+//willwe have non puctuations in the senteces
+
+//PSEUDO:
+//split sentence
+//loop split sentence
+//inner loop to tag each letter
+//check against regex and if letter increment count and set lognest if longest
+
+//out of loops
+
+//if longest.length > 1:
+//check vowel count
+
+//if longest.length === 1:
+//return longest[0]
+
+//return whatever would be expected in the no longest case would have asked interviewer
+//return ""
