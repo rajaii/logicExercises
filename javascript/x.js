@@ -19,7 +19,7 @@
 //always refactor
 
 //==> build queue from scratch go over the dft mthods and their visual appearance, see algy,
-// easy => medium array and str (leetcode), back to sorting redo quick sort video understand code and others, reconstruct-bst video redo, binary tree medium
+// assign-cookies refactor video, back to sorting redo quick sort video understand code and others, reconstruct-bst video redo, binary tree medium
 
 //For Ones I could do with help from theory walkthrough, hints, etc revisit later if have time or also maybe understodd conceptually but couldn't bring to code:
 //later revisit (was able to do with theory walkthrough)
@@ -32,6 +32,7 @@
 // quickSort
 //  find-loop constant space
 //river-sizes
+//combination sum combos permutations in general
 
 //later REDO for sure could not do at all => WAS STUMPED
 //watch hteory walkthrough, attempt, watch code walkthrough if still stumped in 45
@@ -39,3 +40,4 @@
 //find-nodes-distance-k
 //apartment-hunting
 const k = /[^A-Za-z]/g;
+let p = { 2: 2 };
